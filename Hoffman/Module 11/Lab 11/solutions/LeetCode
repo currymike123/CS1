@@ -1,0 +1,42 @@
+//running sum -- my solution -- you could have done it
+//differently!
+class Solution {
+    public int[] runningSum(int[] nums) {
+        for(int i = 1; i<nums.length; i++) {
+            int temp = nums[i] + nums[i-1];
+            nums[i] = temp;
+        }
+        return nums;
+    }
+}
+
+
+//median of two sorted arrays -- my solution -- you could have done it
+//differently!
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int[] nums3 = new int[nums1.length+nums2.length];
+        
+        for(int i = 0, g = 0, k = 0; i<nums3.length; i++) {
+            if(g >= nums1.length && k < nums2.length) {
+                nums3[i] = nums2[k];
+                k++;
+            } else if (g < nums1.length && k >= nums2.length) {
+                nums3[i] = nums1[g];
+                g++;
+            } else if(nums1[g] < nums2[k]) {
+                nums3[i] = nums1[g];
+                g++;
+            } else {
+                nums3[i] = nums2[k];
+                k++;
+            }
+        }
+        
+        if(nums3.length % 2 == 0) {
+            return (nums3[nums3.length/2] + nums3[nums3.length/2 - 1]) / 2.0;
+        } else {
+            return nums3[nums3.length/2];
+        }
+    }
+}

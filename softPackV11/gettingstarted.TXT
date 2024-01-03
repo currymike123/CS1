@@ -1,0 +1,128 @@
+Getting Started
+---------------
+
+1) Using the command line.
+   
+   Linux, Mac, Raspberry Pi: 
+
+     Activate the Terminal program. Then enter
+
+        cd Desktop
+
+     which positions the computer on the Desktop folder. 
+     Then enter
+
+        cd <softwarepackage>
+
+     where <softwarepackage> is the name of the folder
+     that contain the software for the book. This
+     assumes you installed the software package folder
+     on your Desktop. You can then enter commands via 
+     the keyboard. For example, you can enter
+
+        javac Program1.java
+
+
+   Windows 
+
+     Enter in the search window on the initial screen
+
+       command prompt 
+
+     Right click on the command prompt icon.
+     Click on "pin to task bar". Then the command prompt icon 
+     will appear on the Windows taskbar. Thus, to use the 
+     command line interface, you simply click on the command
+     prompt icon on the taskbar. Then enter
+
+        cd Desktop
+        cd <softwarepackage>   
+ 
+     where <softwarepackage> is the name of the folder that 
+     contains the software package for the book. This assumes
+     you installed the software package on the Desktop. Once
+     the computer is on the folder for the software package,
+     you can enter commands. For example, you can enter
+
+        javac Program1.java
+
+
+
+2) Installing JDK
+
+   Linux and Raspberry Pi     
+
+      Activate the software manager. Search for JDK. Select
+      the default listed. Click on install.
+
+   Windows and Mac
+      Search for JDK download. Click on link to Oracle. Select
+      the JDK for your system. Follow directions to install.
+                                                                  
+   On Windows, you also need to add the complete name of the 
+   folder that contains javac.exe to the Path environment variable. 
+   Somewhat tricky to do so you may want to get help. Also the
+   specific procedure may be dependent on your system. So
+   the directions below may not be correct for your system
+
+   First find the folder that contains your javac.exe program.
+   It's probably in 
+
+      c:\program files\java\jdk-xx\bin (where xx is version number)
+      
+   When you find it, you should see the complete folder name at the top
+   of the window
+      
+         Right click
+         Copy address
+      
+   Now you have to paste the copied address into the path variable:
+
+         Find the Settings program and run it
+         Search for Edit System Environment 
+         Click to invoke
+         Click on Path
+         Click on Edit
+         Click on New
+         In box that appears, right click and paste copied address
+         Exit all the windows you are in.
+
+      To see if you can invoke javac, start command line program and enter
+
+         javac
+
+      If you get a long list of arguments that can be used when invoking
+      javac, then you are all set.
+     
+
+3) Using nano and notepad
+
+   Start the command line interface (see directions in (1) above).
+   Enter on the command line
+
+     nano <filename>          (on Linux, Mac, Raspberry Pi)
+   or
+     notepad <filename>       (on Windows)
+
+   For example,
+
+     nano Program1.java
+   or
+     notepad Program1.java
+
+   For help on nano, after starting nano, enter Alt-h. For help
+   on notepad, click on the help option on menu bar.
+
+   If you start notepad by entering just notepad (no file name),
+   you can then save what you entered by clicking on "File" and 
+   then "Save as" (don't click on "Save"). You can then enter 
+   the file name in the window on the bottom of the screen. 
+   Before you click on Save" on the bottom right of the window, 
+   in the File type text box on the bottom of screen, select 
+   "All files". If you don't do this, notepad tacks on ".txt" 
+   to whatever file name you enter. You don't have to do this 
+   if you specify the name of the file when you invoke notepad.
+   
+   
+     
+

@@ -1,0 +1,18 @@
+ 1 class Counter3
+ 2 {
+ 3    public static void main(String[] args)
+ 4    {
+ 5       countDown(2);
+ 6    }
+ 7    //----------------------------------
+ 8    public static void countDown(int n)
+ 9    {
+10       if (n > 0)
+11       {
+12          System.out.println(n);
+13          countDown(n - 1);      // tail recursion
+14       }
+15       else
+16          System.out.println("bottom");
+17    }
+18 }

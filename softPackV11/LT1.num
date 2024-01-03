@@ -1,0 +1,35 @@
+ 1 class LT1
+ 2 {
+ 3    static Node head = null; // static so addNode/traverse can access
+ 4    public static void main(String[] args)
+ 5    {
+ 6       addNode(1);      // add node with 1 to the beginning of list
+ 7       addNode(2);      // add node with 2 to the beginning of list
+ 8       addNode(3);      // add node with 3 to the beginning of list
+ 9       rtraverse(head); // last-to-first traversal
+10    }
+11    //-----------------------------------
+12    public static void addNode(int value)
+13    {
+14       Node p = new Node(); // create new node
+15       p.x = value;         // initialize x field in this node
+16       p.link = head;       // make new node point to current 1st node
+17       head = p;            // make head point to new node
+18    }
+19    //----------------------------------
+20    public static void rtraverse(Node p)  // traverse from last to 1st
+21    {
+22       if (p != null)
+23       {
+24          rtraverse(p.link);        // display tail in reverse order
+25          System.out.println(p.x);  // display data in 1st node
+26       }
+27    }
+28 }
+29 //==================================================================
+30 class Node         // Node definition
+31 {
+32    Node link;      // points to next node or is null if at last node
+33    int x;
+34 }
+35 
