@@ -9,9 +9,9 @@ style: |
   }
 ---
 
-# Week 1
+# Week 1: Computer Science 1
 
-## Introduction to Computer Science
+## Introduction to Computer Science & Binary
 
 ---
 
@@ -49,7 +49,7 @@ A <b>computer</b> is a machine that can be programmed to carry out sequences of 
 
 ---
 
-Computers speak in <b>Binary</b> which is a <b>base 2</b> number system. It uses only <b>0 and 1</b> to represent numbers which is easy to represent with electrical circuits, 0 is off and 1 is on.
+Computers speak in <b>Binary</b> which is a <b>base 2</b> number system. It uses only <b>0 and 1</b> to represent numbers which is easy to represent with electrical circuits, 0 is off and 1 is on. All data and software in a computer is represented in binary.
 
 ---
 
@@ -90,6 +90,22 @@ Computers speak in <b>Binary</b> which is a <b>base 2</b> number system. It uses
 
 ---
 
+The CPU can only understand binary and processes data in this format. Bit's are the smallest unit of data that a computer can process.
+
+A <b>bit</b> is a single binary digit, either 0 or 1.
+
+A <b>byte</b> is a group of 8 bits.
+
+A <b>word</b> is the number of bits that can be transferred from memory to the CPU in a single operation. This is usually 32 or 64 bits.
+
+bit -> byte -> word
+
+<b>Storage</b>
+bit -> byte (8 bits) -> kilobyte (1024 bytes) -> megabyte (1024 kilobytes) ->
+gigabyte (1024 megabytes) -> terabyte (1024 gigabytes)
+
+---
+
 # What is Programming?
 
 ---
@@ -106,6 +122,14 @@ Different types of programming languages:
 
 - <b>Low-level</b> programming languages are closer to machine language. They are harder to read and write than high-level languages. Examples are Assembly and C.
 - <b>High-level</b> programming languages are closer to human language. They are easier to read and write than low-level languages. Examples are Java, Python, C++, JavaScript, etc.
+
+---
+
+We are close to being able to write our first Java program. But first we need to create a file to store our program.
+
+In VS Code go to File -> New File. Then create a new file called <b>HelloWorld.java</b>. We need to save this file with a name that ends in <b>.java</b>. This is the file extension for Java programs.
+
+You should now see the <b>HelloWorld.java</b> file in the <b>Explorer</b> pane on the left side of the screen and the text editor should be open with the file loaded.
 
 ---
 
@@ -215,7 +239,7 @@ class HelloWorld
 
 ```
 
-Let's break down each part of this program.
+Let's break down each part of this program. There will be a lot of new terms and concepts in this section. Don't worry if you don't understand everything right away. We will cover all of these concepts in more detail later in the course.
 
 ---
 
@@ -225,9 +249,11 @@ class HelloWorld
 
 <b>class</b>: Indicates the beginning of a class.
 
-<b>HelloWord</b>: This is the class name. The class name must match the file name. In this case the file name is HelloWorld.java.
+<b>HelloWord</b>: This is the class name. The class name must match the file name. In this case the file name is HelloWorld.java. Notice that the class name starts with a capital letter. This is a convention that we will follow throughout the course.
 
 ---
+
+<style scoped>section { font-size: 25px; }</style>
 
 ```java
 {
@@ -243,7 +269,7 @@ class HelloWorld
 <b>static</b>: Indicates the we can excute the method without creating an object of the class.
 <b>void</b>: Indicates that the method does not return a value.
 
-<b>main</b>: This is the name of the method. The main method is the entry point for all Java programs. The main method is where the program starts executing.
+<b>main</b>: This is the name of the method. The main method is the entry point for all Java programs. The main method is where the program starts executing. Notice that the method name starts with a lowercase letter. This is a convention that we will follow throughout the course.
 
 <b>( )</b>: Indicates the beginning and end of the method header.
 
@@ -277,5 +303,66 @@ class HelloWorld
 }
 
 ```
+
+---
+
+```java
+class HelloWorld
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Hello World!");
+    }
+}
+
+```
+
+Notice the formatting of the code. The method header is indented one tab and the method body is indented two tabs. This allows us to easily see where the method begins and ends.
+
+Having correct formatting is important for readability. It makes it easier for you and others to read and understand your code. Get used to formatting your code correctly now, it might take a little longer but it's a very important habit to develop.
+
+---
+
+### Compile and run your first Java Program
+
+---
+
+When your computer runs a Java program it first needs to convert the Java code into a format that the computer can understand. This is called <b>compiling</b> the code. The Java compiler is called <b>javac</b>.
+
+It converts our human-readable code into <b>bytecode</b>. Bytecode is a set of instructions that can be executed by the Java Virtual Machine (JVM). The JVM is a program that runs on your computer and executes Java programs.
+
+The JVM is different for each operating system. This means that the same Java program can run on Windows, Mac, and Linux.
+
+---
+
+Let's compile our first Java program. Open a terminal window and navigate to the folder where you saved the <b>HelloWorld.java</b> file.
+
+Your should already have a terminal opened in VS Code but if you don't you can open one by going to Terminal -> New Terminal. You should see a terminal window at the bottom of the screen and it's opened to the <b>hello-world</b> folder. If not, use the command line to navigate to the <b>hello-world</b> folder.
+
+Now enter the following command to compile the program.
+
+```bash
+javac HelloWorld.java
+```
+
+You should see a new file in the <b>hello-world</b> folder called <b>HelloWorld.class</b>. This is the compiled bytecode version of our program.
+
+---
+
+Now we need to run the program. Enter the following command to run the program.
+
+```bash
+java HelloWorld
+```
+
+You should see the following output in the terminal.
+
+```bash
+Hello World!
+```
+
+---
+
+### Congratulations! You just wrote and ran your first Java program!
 
 ---

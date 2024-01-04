@@ -9,7 +9,9 @@ style: |
   }
 ---
 
-### Command Line and the Development Environment
+# Week 1: Computer Science 1
+
+## Command Line and the Development Environment
 
 ---
 
@@ -95,7 +97,7 @@ Desktop/hello_world
 
 Before we can start writing code we need to setup our development environment. A <b>development environment</b> is a collection of tools that we use to write code.
 
-This is your code notebook, where you will all your work will be done, so make sure you have it setup correctly and that you are comfortable using it.
+This will include the <b>Java language</b> and a <b>text editor</b>, where all your work will be done. Therefore, make sure it is set up correctly and that you are comfortable using it
 
 ---
 
@@ -103,14 +105,42 @@ This is your code notebook, where you will all your work will be done, so make s
 
 ---
 
-To run a Java program you first need the Java Development Kit (JDK) installed on your computer. You can download the JDK from [Oracle](https://www.oracle.com/java/technologies/javase-downloads.html) or via Visual Studio Code which we will walk through.
+To run a Java program you first need the Java Development Kit (JDK) installed on your computer. The JDK is available from [Oracle](http://www.java.com), this is the company that developed the Java Lanaguage.
 
-You will need a text editor to write your Java code. You can use whichever text editor is native to your operating system, textEdit, notepad, etc. I recommend using [Visual Studio Code](https://code.visualstudio.com/).
+It is also available as a package with a text editor included. That's great because we need both!
 
-Any text editor will work but having a text editor that is designed for programming will make your life easier. These text editors are called <b>Integrated Development Environments (IDE)</b>. Visual Studio Code is free and works on Windows, Mac, and Linux.
+[Visual Studio Code Coding Pack](https://code.visualstudio.com/docs/java/java-tutorial) includes both a text editor and the JDK. It is available for Windows & Mac. Follow the link and install the version for your operating system. You can use lab time to complete this task.
+
+We are going to use the text editor available in the Coding Pack called [Visual Studio Code](https://code.visualstudio.com/).
+
+Any text editor will work for writing code but having a text editor that is designed for programming will make your life easier. These text editors are called <b>Integrated Development Environments (IDE)</b>. Visual Studio Code is an IDE.
 
 ---
 
-Installing Java in Visual Studio Code via the Java Extension Pack. This will install the Java Development Kit (JDK) and the Java Runtime Environment (JRE).
+### Installing Visual Studio Coding Pack
 
-![bg right width:600px](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*QlnEvJOwSnbdrkGvMAa-9w.png)
+---
+
+Download and install [Visual Studio Code Coding Pack](https://code.visualstudio.com/docs/java/java-tutorial). Once you it installed open it up, you should have a screen that looks like this.
+
+For future reference, this is the documentation for [Visual Studio Code Docs](https://code.visualstudio.com/docs). We will go through the basics of using Visual Studio Code in class but the documentation is a great resource if you get stuck.
+
+![bg right width:600px](https://code.visualstudio.com/assets/docs/getstarted/tips-and-tricks/welcome-page.png)
+
+---
+
+Let's open the folder that we created earlier. Click the <b>Open Folder</b> link on the welcome screen. Then navigate to the <b>hello-world</b> folder and click <b>Select Folder</b>.
+
+If you have VS Code previously installed. Click on <b>File</b> and then <b>Open Folder</b>. Navigate to the <b>hello-world</b> folder and click <b>Select Folder</b>.
+
+You should now see the <b>hello-world</b> folder in the <b>Explorer</b> pane on the left side of the screen. VS Code now has access to all the files in the <b>hello-world</b> folder. There should be no files in the folder yet but we will start to make some soon.
+
+You can also open the terminal by clicking <b>Terminal</b> in the top menu and then <b>New Terminal</b>. Notice the terminal is now open at the bottom of the screen and looks the same as the command line we used earlier.
+
+---
+
+We now have the Java language installed and a text editor to write our code in.
+
+Let's begin to discuss computer science, the java language, and how to write code!
+
+---
