@@ -92,16 +92,16 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 | Week | Topic                                     |
 | ---- | ----------------------------------------- |
 | 1    | Introduction to Computer Science & Binary |
-| 2    | Constants & Variables                     |
+| 2    | Variables                                 |
 | 3    | Control Structures                        |
-| 4    | I/O & Test 1                              |
+| 4    | I/O & <b>Test 1</b>                       |
 | 5    | Iteration & Loops                         |
 | 6    | Methods                                   |
 | 7    | Arrays                                    |
-| 8    | Test 2 & Classes                          |
+| 8    | <b>Test 2</b> & Classes                   |
 | 9    | Sorting & Nesting                         |
 | 10   | Nesting & ArrayList                       |
-| 11   | Sorting Algorithms & Test 3               |
+| 11   | Sorting Algorithms & <b>Test 3</b>        |
 | 12   | Inheritance & Exceptions                  |
 | 13   | File Handling                             |
 | 14   | Recursion                                 |
