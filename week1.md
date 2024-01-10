@@ -11,7 +11,7 @@ style: |
 
 # Week 1: Computer Science 1
 
-## Introduction to Computer Science & Binary
+## How to speak machine
 
 ---
 
