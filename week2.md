@@ -553,20 +553,6 @@ The operator ! is called the <b>not</b> operator. It returns true if the express
 
 ---
 
-```java
-boolean p = true;
-boolean q = false;
-boolean r;
-
-r = p && q;
-System.out.println(r);
-// Output: false
-```
-
-The expression p && q is false because p is true and q is false. Both expressions must be true for the && operator to return true.
-
----
-
 We can use a <b>truth table</b> to show all the possible values of a logical expressions: q && p and p || p.
 
 <div class="columns">
@@ -602,6 +588,112 @@ The ! operator is called the <b>not</b> operator. It returns true if the express
 | ----- | ----- |
 | true  | false |
 | false | true  |
+
+---
+
+What does the following print?
+
+```java
+boolean p = true;
+boolean q = false;
+boolean r;
+
+r = p && q;
+System.out.println(r);
+```
+
+---
+
+```java
+boolean p = true;
+boolean q = false;
+boolean r;
+
+r = p && q;
+System.out.println(r);
+// Output: false
+```
+
+The expression p && q is false because p is true and q is false. Both expressions must be true for the && operator to return true.
+
+---
+
+What does the following print?
+
+```java
+boolean p = true;
+boolean q = false;
+boolean r;
+
+r = p || q;
+System.out.println(r);
+```
+
+---
+
+```java
+boolean p = true;
+boolean q = false;
+boolean r;
+
+r = p || q;
+System.out.println(r);
+// Output: true
+```
+
+The expression p || q is true because p is true. Only one expression must be true for the || operator to return true.
+
+---
+
+What does the following print?
+
+```java
+boolean p = true;
+
+System.out.println(!p);
+```
+
+---
+
+```java
+boolean p = true;
+
+System.out.println(!p);
+// Output: false
+```
+
+The expression !p is false because p is true. The ! operator returns the opposite of the expression.
+
+---
+
+### Printing to the Screen
+
+---
+
+Let's look at the three different ways to print output to the screen.
+
+<b>System.out.println()</b> is one of the methods to print output to the screen. It prints the string inside the parentheses to the screen and then moves the cursor to the next line.
+
+<b>System.out.print()</b> is another method to print output to the screen. It prints the string inside the parentheses to the screen and leaves the cursor on the same line.
+
+<b>System.out.printf()</b> is another method to print output to the screen. It prints the string inside the parentheses to the screen and leaves the cursor on the same line. It also allows you to format the output.
+
+---
+
+<b>System.out.printf()</b>
+
+```java
+String name = "Class";
+int age = 100;
+char grade = 'A';
+
+System.out.printf("Hello, %s! %n You should get %d on Test 1 which is an %c.", name, age, grade);
+// Hello, Class!
+// You should get 100 on Test 1 which is an A.
+
+```
+
+The %s is a placeholder for a String. The %d is a placeholder for an integer. The %f is a placeholder for a float or double. The %c is a placeholder for a char. The %b is a placeholder for a boolean. The %n is a placeholder for a new line.
 
 ---
 
