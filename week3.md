@@ -405,3 +405,114 @@ System.out.println(num + " is even: " + isEven);
 ```
 
 ---
+
+Create a program that checks if a number is between -1 and 5 inclusive.
+
+There are multiple ways to write this program. Explore more than one way to write it.
+
+---
+
+```java
+int num = 10;
+boolean isBetween;
+
+if (num >= -1 && num <= 5)
+  isBetween = true;
+else
+  isBetween = false;
+
+System.out.println(num + " is between -1 and 5 inclusive: " + isBetween);
+```
+
+---
+
+```java
+int num = 10;
+boolean isBetween;
+
+if (num >= -1)
+  if (num <= 5)
+    isBetween = true;
+  else
+    isBetween = false;
+else
+  isBetween = false;
+
+System.out.println(num + " is between -1 and 5 inclusive: " + isBetween);
+```
+
+---
+
+The following table shows grade letters and their corresponding grade points. Write a program that converts grade points to a grade letter.
+
+<div class="small_table">
+
+| Grade Letter | Grade Points |
+| :----------: | :----------: |
+|      A       |    100-90    |
+|      B       |    89-80     |
+|      C       |    79-70     |
+|      D       |    69-60     |
+|      F       |     59-0     |
+
+</div>
+
+---
+
+```java
+int grade = 85;
+char gradeLetter;
+
+if (grade >= 90)
+  gradeLetter = 'A';
+else if (grade >= 80)
+  gradeLetter = 'B';
+else if (grade >= 70)
+  gradeLetter = 'C';
+else if (grade >= 60)
+  gradeLetter = 'D';
+else
+  gradeLetter = 'F';
+```
+
+---
+
+Create a program that computes the BMI of a person from who is 70 inches tall and 150 pounds. The formula for BMI is:
+
+$$BMI = \frac{weight \times 703}{height^2} $$
+
+The program should print the BMI and the category the person falls into. The categories are:
+
+<div class="small_table">
+
+| Category | BMI Range |
+| :------: | :-------: |
+|   Low    |  0-18.5   |
+|  Normal  | 18.5-24.9 |
+|   High   |  25-29.9  |
+|  Obese   |  30-39.9  |
+|  Morbid  |    40+    |
+
+---
+
+```java
+int height = 70;
+int weight = 150;
+double bmi;
+String category;
+
+bmi = weight * 703 / (height * height);
+
+if (bmi < 18.5)
+  category = "Low";
+else if (bmi < 25)
+  category = "Normal";
+else if (bmi < 30)
+  category = "High";
+else if (bmi < 40)
+  category = "Obese";
+else
+  category = "Morbid";
+```
+
+---
