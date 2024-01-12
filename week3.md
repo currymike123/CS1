@@ -9,7 +9,9 @@ style: |
   }
 
   .small_table {
-    scale: 0.8;
+
+    transform: scaleY(0.9);
+
   }
 
   .boxed {
@@ -40,13 +42,29 @@ Let's review the simple <b>if statement</b> first.
 ```java
 if (condition)
   // statement
-
-if (condition) {
-  // statements
-}
 ```
 
-We can read this as "if the condition is true, then execute the statements". The statement is formatted in two ways. The first is for a single statement. The second is for multiple statements (compound statements).
+We can read this as "if the condition is true, then execute the statement".
+
+---
+
+Recap of <b>Relational & Boolean Operators</b>
+
+<div class="small_table">
+
+| Operator | Description              |
+| :------: | :----------------------- |
+|    ==    | equal to                 |
+|    !=    | not equal to             |
+|    <     | less than                |
+|    <=    | less than or equal to    |
+|    >     | greater than             |
+|    >=    | greater than or equal to |
+|    !     | not                      |
+|    &&    | and                      |
+|   \|\|   | or                       |
+
+</div>
 
 ---
 
@@ -162,5 +180,228 @@ End
 Notice the format of the <b>if-else</b> statement. The <b>if</b> and <b>else</b> are aligned. The <b>if</b> and <b>else</b> are indented. The <b>if</b> and <b>else</b> are enclosed in curly braces. The statements in the <b>if</b> and <b>else</b> are indented.
 
 You can use braces to enclose a single statement, but it is not required. It is a good idea to use braces to enclose a single statement. It makes the code easier to read and less prone to errors.
+
+---
+
+The statements within <b>if</b> and <b>if-else</b> statements can be other <b>if</b> and <b>if-else</b> statements. This is called <b>nesting</b>.
+
+```java
+if (condition1)
+  if (condition2)
+    // statements
+  else
+    // statements
+else
+  // statements
+```
+
+---
+
+```java
+if (count <= 10)
+  if (count == 10)
+    System.out.println("Count is equal to 10");
+  else
+    System.out.println("Count is less than 10");
+else
+  System.out.println("Count is greater than 10");
+```
+
+If count is less than or equal to 10 the first condition is true, the output will be:
+
+```java
+Count is less than 10
+```
+
+If count is greater than 10, the first condition is false, the output will be:
+
+```java
+Count is greater than 10
+```
+
+If count is equal to 10, the both conditions are true, the output will be:
+
+```java
+Count is equal to 10
+```
+
+---
+
+Can we write the previous example without nesting the <b>if</b> and <b>if-else</b> statements?
+
+---
+
+Along with if and if-else statements, Java has an <b>else-if</b> statement. It is used when you have more than two possible values for a variable.
+
+```java
+if (condition1)
+  // statements
+else if (condition2)
+  // statements
+else
+  // statements
+```
+
+---
+
+```java
+if (condition1)
+  // statements
+else if (condition2)
+  // statements
+else
+  // statements
+```
+
+With an else-if statement, the conditions are evaluated in order. If the first condition is true, the statements are executed and the rest of the else-if statement is skipped. If the first condition is false, the second condition is evaluated. If the second condition is true, the statements are executed and the rest of the else-if statement is skipped. If the second condition is false, the else statements are executed.
+
+---
+
+```java
+if (count == 10)
+  System.out.println("Count is equal to 10");
+else if (count < 10)
+  System.out.println("Count is less than 10");
+else
+  System.out.println("Count is greater than 10");
+```
+
+---
+
+We also can combine multiple conditions together with the <b>logical operators</b>.
+
+<div class="small_table">
+
+| Operator | Description |
+| :------: | :---------- |
+|    !     | not         |
+|    &&    | and         |
+|   \|\|   | or          |
+
+</div>
+
+```java
+
+if (condition1 && condition2)
+  // statements
+else if (condition1 || condition2)
+  // statements
+else if (!condition1)
+  // statements
+else
+  // statements
+```
+
+---
+
+```java
+if (count == 10 && count < 20)
+  System.out.println("Count is equal to 10 and less than 20");
+else if (count == 10 || count < 20)
+  System.out.println("Count is equal to 10 or less than 20");
+else if (!(count == 10))
+  System.out.println("Count is not equal to 10");
+else
+  System.out.println("Count is greater than 20");
+```
+
+---
+
+A switch statement is another way to control the flow of a program. It is used when you have a limited number of possible values for a variable. The switch statement is similar to a series of if-else statements.
+
+```java
+switch (variable) {
+  case value1:
+    // statements
+    break;
+  case value2:
+    // statements
+    break;
+  case value3:
+    // statements
+    break;
+  default:
+    // statements
+}
+```
+
+---
+
+If we wanted to use a switch statement to convert a character to a day of the week, we could use the following code.
+
+```java
+char date = 'M';
+switch (date) {
+  case 'M':
+    System.out.println("Monday");
+    break;
+  case 'T':
+    System.out.println("Tuesday");
+    break;
+  case 'W':
+    System.out.println("Wednesday");
+    break;
+  case 'R':
+    System.out.println("Thursday");
+    break;
+  case 'F':
+    System.out.println("Friday");
+    break;
+  default:
+    System.out.println("Invalid day");
+}
+```
+
+---
+
+### Exercises
+
+---
+
+Create a program that checks to see if a number is positive or negative. It should print either "true" or "false" depending on the number. Format your print statement like this:
+
+```java
+10 is positive: true
+```
+
+Think about what you need to do to determine if a number is positive or negative. What math operation do you need to use? What is the condition? What is the statement? What math operation do you need to use?
+
+---
+
+```java
+int num = 10;
+boolean isPositive;
+
+if (num >= 0)
+  isPositive = true;
+else
+  isPositive = false;
+
+System.out.println(num + " is positive: " + isPositive);
+```
+
+---
+
+Create a program that checks to see if a number is even or odd. It should print either "true" or "false" depending on the number. Format your print statement like this:
+
+```java
+10 is even: true
+```
+
+Think about what you need to do to determine if a number is even or odd. What math operation do you need to use? What is the condition? What is the statement? What math operation do you need to use?
+
+---
+
+```java
+int num = 10;
+boolean isEven;
+
+if (num % 2 == 0)
+  isEven = true;
+else
+  isEven = false;
+
+System.out.println(num + " is even: " + isEven);
+```
 
 ---
