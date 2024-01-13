@@ -408,6 +408,9 @@ System.out.println(num + " is even: " + isEven);
 
 Create a program that checks if a number is between -1 and 5 inclusive.
 
+Mathematically, we can write this as:
+-1 ≤ x ≤ 5
+
 There are multiple ways to write this program. Explore more than one way to write it.
 
 ---
@@ -479,7 +482,7 @@ else
 
 Create a program that computes the BMI of a person from who is 70 inches tall and 150 pounds. The formula for BMI is:
 
-$$BMI = \frac{weight \times 703}{height^2} $$
+$$BMI = \frac{weight  \times 703}{height^2} $$
 
 The program should print the BMI and the category the person falls into. The categories are:
 
