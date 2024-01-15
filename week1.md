@@ -27,6 +27,8 @@ A <b>computer</b> is a machine that can be programmed to carry out sequences of 
 
 ---
 
+# Computer Components
+
 - Central Processing Unit (CPU)
   - Arithmetic Logic Unit (ALU): Add, Subtract, Multiply, Divide, Compare
   - Control Unit (CU): Fetch, Decode, Execute
@@ -42,6 +44,60 @@ A <b>computer</b> is a machine that can be programmed to carry out sequences of 
 ![bg right width:600px](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Von_Neumann_Architecture.svg/1920px-Von_Neumann_Architecture.svg.png)
 
 # Von Neumann Architecture
+
+1945 description for the EDVAC.
+
+- A processing unit with both an arithmetic logic unit and processor registers
+- A control unit that includes an instruction register and a program counter
+- Memory that stores data and instructions
+- External mass storage
+- Input and output mechanisms
+
+---
+
+![bg right width:350px](https://upload.wikimedia.org/wikipedia/commons/0/09/Jacquard.loom.cards.jpg)
+
+# Jacquard Loom
+
+The use of punched cards in the <b>Jacquard loom</b> (c. 1804) represented an early form of programmability. The pattern to be woven into the fabric was determined by the series of cards used, and different patterns could be produced by simply changing the card sequences. Thread was raised or lowered according to the hole positions along the card row, and the presence or absence of a hole indicated whether the thread was to be raised or lowered.
+
+---
+
+![bg right width:400px](https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Babbages_Analytical_Engine%2C_1834-1871._%289660574685%29.jpg/440px-Babbages_Analytical_Engine%2C_1834-1871._%289660574685%29.jpg)
+
+# Analytical Engine
+
+The <b>analytical engine</b> was a proposed mechanical general-purpose computer designed by English mathematician and computer pioneer Charles Babbage. It was first described in 1837 as the successor to Babbage's difference engine, a design for a simpler mechanical computer.
+
+Lady Ada Lovelace, a mathematician and daughter of the poet Lord Byron, wrote the first computer program for the analytical engine.
+
+---
+
+![bg right width:400px](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Hollerith_Punched_Card.jpg/440px-Hollerith_Punched_Card.jpg)
+
+# Hollerith Punched Card
+
+The <b>Hollerith card</b> was a type of punched card used for tabulating in the 1890 United States Census, invented by Herman Hollerith. It was the first such device that was used for this purpose and marked the beginning of the era of semiautomatic data processing systems. Later sold to IBM.
+
+---
+
+![bg right width:400px](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bombe-rebuild.jpg/440px-Bombe-rebuild.jpg)
+
+# Bombe
+
+The <b>Bombe</b> was an electromechanical device used by British cryptologists to help decipher German Enigma-machine-encrypted secret messages during World War II. <b>Alan Turing</b> was a major force in the development of the Bombe.
+
+A Turing machine is a theoretical device that can simulate any algorithm or computation.
+
+---
+
+![bg right width:500px](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg/440px-Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg)
+
+# ENIAC
+
+The <b>ENIAC</b> was the first electronic general-purpose computer. It was Turing-complete, digital, and capable of being reprogrammed to solve "a large class of numerical problems". It was the first programmable, electronic, digital computer.
+
+<b>Turing-complete</b> refers to the capability of a system to perform any computation that can be done by a Turing machine.
 
 ---
 
