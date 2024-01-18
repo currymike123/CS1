@@ -122,7 +122,7 @@ Computers speak in <b>Binary</b> which is a <b>base 2</b> number system. It uses
 | Thousands     | 10^3   |
 | Ten-thousands | 10^4   |
 
-235 = (2 _ 10^2) + (3 _ 10^1) + (5 \* 10^0)
+235 = (2 \* 10^2) + (3 \* 10^1) + (5 \* 10^0)
 235 = 200 + 30 + 5
 
 </div>
@@ -138,11 +138,145 @@ Computers speak in <b>Binary</b> which is a <b>base 2</b> number system. It uses
 | Eights   | 2^3    |
 | Sixteens | 2^4    |
 
-7 = (1 _ 2^2) + (1 _ 2^1) + (1 \* 2^0)
+7 = (1 \* 2^2) + (1 \* 2^1) + (1 \* 2^0)
 7 = 4 + 2 + 1
 
 </div>
 </div>
+
+---
+
+Let's convert the decimal number 235 to binary.
+
+---
+
+First, what is the largest power of 2 that is less than 235?
+
+---
+
+<center>
+<div class="small_table">
+
+| Power | Value |
+| ----- | ----- |
+| 2^0   | 1     |
+| 2^1   | 2     |
+| 2^2   | 4     |
+| 2^3   | 8     |
+| 2^4   | 16    |
+| 2^5   | 32    |
+| 2^6   | 64    |
+| 2^7   | 128   |
+| 2^8   | 256   |
+| 2^9   | 512   |
+| 2^10  | 1024  |
+
+</div>
+</center>
+
+---
+
+The largest power of 2 that is less than 235 is 2^7 = 128.
+
+Let's put a 1 in the 2^7 position:
+
+10000000
+
+---
+
+Now we need to subtract 128 from 235 to get the remainder.
+
+235 - 128 = 107
+
+What is the largest power of 2 that is less than 107?
+
+---
+
+The largest power of 2 that is less than 107 is 2^6 = 64.
+
+Let's put a 1 in the 2^6 position:
+
+11000000
+
+---
+
+Now we need to subtract 64 from 107 to get the remainder.
+
+107 - 64 = 43
+
+What is the largest power of 2 that is less than 43?
+
+---
+
+The largest power of 2 that is less than 43 is 2^5 = 32.
+
+Let's put a 1 in the 2^5 position:
+
+11100000
+
+---
+
+Now we need to subtract 32 from 43 to get the remainder.
+
+43 - 32 = 11
+
+What is the largest power of 2 that is less than 11?
+
+---
+
+The largest power of 2 that is less than 11 is 2^3 = 8.
+
+Let's put a 1 in the 2^3 position:
+
+11101000
+
+---
+
+Now we need to subtract 8 from 11 to get the remainder.
+
+11 - 8 = 3
+
+What is the largest power of 2 that is less than 3?
+
+---
+
+The largest power of 2 that is less than 3 is 2^1 = 2.
+
+Let's put a 1 in the 2^1 position:
+
+11101010
+
+---
+
+Now we need to subtract 2 from 3 to get the remainder.
+
+3 - 2 = 1
+
+What is the largest power of 2 that is less than 1?
+
+---
+
+The largest power of 2 that is less than 1 is 2^0 = 1.
+
+Let's put a 1 in the 2^0 position:
+
+11101011
+
+---
+
+Now we need to subtract 1 from 1 to get the remainder.
+
+1 - 1 = 0
+
+We are done! The binary representation of 235 is 11101011.
+
+---
+
+Now you try converting the decimal number 411 to binary.
+
+---
+
+The binary representation of 411 is 110011011.
 
 ---
 
