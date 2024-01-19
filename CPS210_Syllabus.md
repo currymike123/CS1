@@ -17,7 +17,7 @@
   - Section 2: W 12:30 PM-3:20 PM CSB 021
   - Section 3: W 3:30 PM-6:20 PM HUM 301
   - Section 4: R 3:30 PM-6:20 PM HUM 301
-- Office Hours: T 2:00 PM - 4:00 PM.
+- Office Hours: T 2:30 PM - 4:30 PM.
 - Office Location: SH 245 CPS 210 Computer Science I: Foundations
 
 ### TA Information:
@@ -40,6 +40,9 @@ Algorithms, computer organization, data representation, program structure, progr
 ### Textbook:
 
 The textbook below is not required, but it is what I will be referencing throughout thecourse. The lectures and labs should be enough to learn the material.
+
+Introduction to JAVA Programming, Comprehensive Version, 10th edition by Y.
+Daniel Liang (On Brightspace)
 
 [Java Programming: A Student-Friendly Approach, Anthony J. Dos Reis. 2023.](https://a.co/d/9B4Pi7k)
 
