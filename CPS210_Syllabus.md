@@ -14,13 +14,15 @@
   - Section 3 & 4: TF 11:00 AM - 12:15 PM
 - Lab Hours & Location:
   - Section 1: W 8:00 AM-10:50 AM CSB 021
+    - TA: Sanket Kamble kambles1@newpaltz.edu
   - Section 2: W 12:30 PM-3:20 PM CSB 021
+    - TA: Avi Drucker druckera2@newpaltz.edu
   - Section 3: W 3:30 PM-6:20 PM HUM 301
+    - TA: Avi Drucker druckera2@newpaltz.edu
   - Section 4: R 3:30 PM-6:20 PM HUM 301
+    - TA: Avi Drucker druckera2@newpaltz.edu
 - Office Hours: T 2:30 PM - 4:30 PM.
-- Office Location: SH 245 CPS 210 Computer Science I: Foundations
-
-### TA Information:
+- Office Location: Science Hall 245
 
 ### Course Description:
 
@@ -112,7 +114,7 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 
 ### SUPPLEMENTAL INSTRUCTION:
 
-Supplemental Instruction is a peer-led study group facilitated by a student that has taken and done well in the class previously and received additional training in study skills and group facilitation. Your SI Leader, Emily Herbert, facilitates two sessions per week based oﬀ of the material presented in class. Students that attend can ask questions, work through problems, review class material and work with other students in the class. Sessions are open to all students. Session times and locations can be
+Supplemental Instruction is a peer-led study group facilitated by a student that has taken and done well in the class previously and received additional training in study skills and group facilitation. Your SI Leader, Shane Lapp, facilitates two sessions per week based oﬀ of the material presented in class. Students that attend can ask questions, work through problems, review class material and work with other students in the class. Sessions are open to all students. Session times and locations can be
 found by going to my.newpaltz.edu and then to the Center for Student Success tab. Signing up early is encouraged but walk-ins are also welcome.
 
 ### CAMPUS-WIDE POLICY STATEMENTS:

@@ -33,7 +33,7 @@ Windows and Mac have a built in command line. On Windows it is called the Comman
 
 ---
 
-### Commands
+### Mac/Unix Commands
 
 <b>ls</b> (List): The ls command is used to list the contents of a directory. It displays the files and subdirectories present in the current directory.
 
@@ -48,6 +48,22 @@ Windows and Mac have a built in command line. On Windows it is called the Comman
 <b>mkdir</b> (Make Directory): The mkdir command is used to create a new directory (folder).
 
 ---
+
+### Windows Commands
+
+<b>dir</b> (Directory): The dir command is used to list the contents of a directory. It displays the files and subdirectories present in the current directory.
+
+<b>cd</b> (Change Directory & Print Working Directory): The cd command is used to navigate between directories (folders) in the command line. It also prints the current working directory.
+
+<b>cd..</b> (Change Directory Up): The cd.. command is used to navigate up one directory (folder) in the command line.
+
+<b>cls</b> (Clear Screen): The cls command is used to clear the terminal screen.
+
+<b>mkdir</b> (Make Directory): The mkdir command is used to create a new directory (folder).
+
+---
+
+I'm going to use the Mac commands in this class. If you are using Windows you will need to use the Windows commands.
 
 Let's begin by creating a folder for our first project. Open the command line and type the following commands:
 
