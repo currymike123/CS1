@@ -13,7 +13,7 @@
   - Section 1 & 2: MR 8:00 AM - 9:15 AM
   - Section 3 & 4: TF 11:00 AM - 12:15 PM
 - Lab Hours & Location:
-  - Section 1: W 8:00 AM-10:50 AM CSB 021
+  - Section 1: W 8:00 AM-10:50 AM SH 259
     - TA: Sanket Kamble kambles1@newpaltz.edu
   - Section 2: W 12:30 PM-3:20 PM CSB 021
     - TA: Avi Drucker druckera2@newpaltz.edu
@@ -116,6 +116,23 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 
 Supplemental Instruction is a peer-led study group facilitated by a student that has taken and done well in the class previously and received additional training in study skills and group facilitation. Your SI Leader, Shane Lapp, facilitates two sessions per week based oﬀ of the material presented in class. Students that attend can ask questions, work through problems, review class material and work with other students in the class. Sessions are open to all students. Session times and locations can be
 found by going to my.newpaltz.edu and then to the Center for Student Success tab. Signing up early is encouraged but walk-ins are also welcome.
+
+### SLO (Student Learning Objectives)
+
+Critical Thinking and Reasoning SLO’s<br>
+Students will
+
+- clearly articulate an issue or problem;
+- identify, analyze, and evaluate ideas, data, and arguments as they occur in their own or others’ work;
+- acknowledge limitations such as perspective and bias; and
+- develop well-reasoned (logical) arguments to form judgments and/or draw conclusions.
+
+Information Literacy SLO’s<br>
+Students will
+
+- locate information effectively using tools appropriate to their need and discipline;
+- evaluate information with an awareness of authority, validity, and bias; and
+- demonstrate an understanding of the ethical dimensions of information use, creation, and dissemination.
 
 ### CAMPUS-WIDE POLICY STATEMENTS:
 

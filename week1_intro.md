@@ -67,9 +67,19 @@ I'm going to use the Mac commands in this class. If you are using Windows you wi
 
 Let's begin by creating a folder for our first project. Open the command line and type the following commands:
 
+<b>Mac</b>
+
 ```bash
 ls
 ```
+
+<b>Windows</b>
+
+```bash
+dir
+```
+
+---
 
 You should see a list of folders and files. One of the folders should be <b>Desktop</b>. This is the folder where we will create our project.
 
@@ -83,7 +93,7 @@ This command will change the current directory to the Desktop folder.
 mkdir hello_world
 ```
 
-This command will create a new folder called <b>hello-world</b>.
+This command will create a new folder called <b>hello_world</b>.
 
 ---
 

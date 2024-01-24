@@ -19,7 +19,7 @@ style: |
 
 ---
 
-A <b>computer</b> is a machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically. (Wikipedia)
+A <b>computer</b> is a machine that can be programmed to carry out sequences of arithmetic or logical operations (computation) automatically.
 
 ---
 
@@ -323,7 +323,7 @@ You should now see the <b>HelloWorld.java</b> file in the <b>Explorer</b> pane o
 
 ---
 
-### Write out first line of code!
+### Write our first line of code!
 
 When programming you have to follow a set of rules called <b>syntax</b>. If you don't follow the syntax rules the program will not run.
 

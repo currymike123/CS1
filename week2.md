@@ -23,7 +23,7 @@ style: |
 
 # Week 2: Computer Science 1
 
-## Variables & Constants
+## Variables
 
 ---
 
