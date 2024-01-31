@@ -176,4 +176,22 @@ If you are going to assign a larger type to a smaller type, you must use a cast.
 ```java
 int i = 100;
 byte b = (byte) i;
+println(b); // prints 100.
 ```
+
+Remember, byte has a range of -128 to 127. So no information is lost in this case.
+
+But if you try to assign a larger number to a smaller type, you will lose information. For example:
+
+```java
+int i = 257;
+byte b = (byte) i;
+println(b); // prints 1
+```
+
+---
+
+Why 1? Remember, byte has a range of -128 to 127. So 257 is out of range. The byte will only store the last 8 bits of the number, which is 1.
+
+- 257 in binary is 100000001.
+- The last 8 bits are 00000001, which is 1 in decimal.
