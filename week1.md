@@ -403,7 +403,7 @@ Each line of code we have written so far is a statement. All statements must end
 The simplest Java program is a single class with a single method.
 
 ```java
-class clase name
+class class name
 {
     method header
     {

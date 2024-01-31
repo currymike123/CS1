@@ -50,8 +50,8 @@ It would be cumbersome to remember the numbered addresses in memory. Instead, we
 
 <b>Variables</b> and <b>constants</b> are used to store information to be referenced by a computer program. They are named locations to reference a computer's memory locations.
 
-- <b>Variables</b> are values that can change.
-- <b>Constants</b> are values that do not change. (We will discuss later)
+- <b>Variables</b> are values that can change after being assigned a value.
+- <b>Constants</b> are values that do not change after being assigned a value. (We will discuss later)
 
 ---
 
@@ -101,7 +101,7 @@ A <b>short</b>, <b>int</b>, and <b>long</b> are all used to store integers.
 ### 0,1,2,3,4,5,6,7,8,9,10, . . .
 
 <br>
-The difference between them is the size of the number they can store. We will mainly use ints in this class.<p>
+The difference between them is the size of the number they can store. We will mainly use int's in this class.<p>
 
 If you store a value outside the range of the variable type, you will <b>overflow</b> the variable. This means the value will wrap around to the other end of the range. Be careful when using variables near the limits of their range.
 
@@ -127,17 +127,17 @@ age = 20;
 int x = 15;
 ```
 
-The <b>equals sign (=)</b> is called the <b>assignment operator</b>. It assigns the value on the right to the variable on the left.z
+The <b>equals sign (=)</b> is called the <b>assignment operator</b>. It assigns the value on the right to the variable on the left.
 
 ---
 
-If we put 10 into a variable named age, then the contents of x becomes 10. We can represent this in a diagram.
+If we put 10 into a variable named age, then the contents of age becomes 10. We can represent this in a diagram.
 
 <center>age</center>
 <div class="boxed">
 10
 </div>
-The diagram is not exactly correct since a computer stores numbers in binary but for simolicity we will use decimal numbers.<p>
+The diagram is not exactly correct since a computer stores numbers in binary but for simplicity we will use decimal numbers.<p>
 
 Now let's assign the value of 20 to age.
 
@@ -148,7 +148,7 @@ Now let's assign the value of 20 to age.
 
 ---
 
-Is the following code okay?
+Is the following code ok?
 
 ```java
 // Declare a variable named age of type int
@@ -168,7 +168,7 @@ This is not allowed. You cannot declare a (local) variable of the same name twic
 
 ## Decimal Numbers
 
-<b>Float</b> and <b>double</b> are used to store decimal numbers. Just like integers, the difference between them is the size of the number they can store. A double is more precise than a float and we will mainly use doubles in this class.
+<b>Float</b> and <b>double</b> are used to store decimal numbers. The difference from integers is the addition of a decimal place, the size of the number they can store, and the precision of the number. A double is more precise than a float. The default type for decimal numbers is a double. To use a float you must add an f to the end of the number.
 
 ### 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, . . .
 
@@ -177,14 +177,13 @@ This is not allowed. You cannot declare a (local) variable of the same name twic
 float price;
 
 // Initialize price to the value of 10.99.
-price = 10.99;
+price = 10.99f;
 
 // Assign the value of 20.99 to price.
-price = 20.99;
+price = 20.99f;
 
 // Declare and initialize with one statement.
 double cost = 15.99;
-
 ```
 
 ---
@@ -218,6 +217,24 @@ A <b>char</b> is used to store a single character. A character is a letter, numb
 Use single quotes (' ') to indicate a character.
 
 Remember that computers only can store numbers. To store a character, the computer uses a number to represent the character. The number is called the <b>ASCII</b> code.
+
+---
+
+```java
+// Declare a variable named letter of type char
+
+char letter;
+
+// Initialize letter to the value of 'A'.
+letter = 'A';
+
+// Assign the value of 'B' to letter.
+letter = 'B';
+
+// Declare and initialize with one statement.
+char grade = 'A';
+
+```
 
 ---
 
@@ -273,7 +290,7 @@ The (int) is called a <b>cast</b>. It converts the character 'A' to an integer. 
 
 <b>Casting</b> is a way to convert one type of variable to another type. Each one of the variable types has a specific size of memory it uses so only certain types can be cast to other types.
 
-Smaller types can be cast to larger types but larger types cannot be cast to smaller types.
+Smaller types can be cast to larger types but larger types cannot be cast to smaller types without losing information.
 
 ---
 
@@ -384,7 +401,7 @@ System.out.println(z);
 We must always explicitly use the multiplication operator (\*) when multiplying two values together. The multiplication operator (\*) is not implied.
 
 ```java
-System.out.println((2))(4)); // illegal missing *
+System.out.println((2)(4)); // illegal missing *
 System.out.println(2x4); // illegal cannot use x
 ```
 
