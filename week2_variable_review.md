@@ -44,7 +44,7 @@ Area of the rectangle is: 23.1
 ## Solution
 
 ```java
-public class Area {
+class Area {
     public static void main(String[] args) {
         double width = 4.2;
         double height = 5.5;
@@ -58,7 +58,7 @@ public class Area {
 
 ---
 
-Write a program called 'Mph.java' which will save the distance and time of a trip and calculate the average speed. The distance and time will be saved in variables. Time should be saved in minutes and as type integer. Distance should be saved in miles and as type double. Your output should look like this:
+Write a program called 'Mph.java' which will save the distance and time of a trip and calculate the average speed. The distance and time will be saved in variables. Time should be saved in minutes as a whole number. Distance should be saved in miles as a decimal number. Your output should look like this:
 
 ```
 distance: 100.0
@@ -128,8 +128,6 @@ f = d;
 
 ---
 
-## Casting Practice
-
 <div class="columns">
 <div>
 <div class="small_table">
@@ -189,9 +187,11 @@ byte b = (byte) i;
 println(b); // prints 1
 ```
 
+Why 1?
+
 ---
 
-Why 1? Remember, byte has a range of -128 to 127. So 257 is out of range. The byte will only store the last 8 bits of the number, which is 1.
+Remember, byte has a range of -128 to 127. So 257 is out of range. The byte will only store the last 8 bits of the number, which is 1.
 
 - 257 in binary is 100000001.
 - The last 8 bits are 00000001, which is 1 in decimal.

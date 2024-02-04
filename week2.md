@@ -248,8 +248,8 @@ A <b>String</b> is used to store a sequence of characters. A String is a sequenc
 // Declare a variable named name of type String
 String name;
 
-// Initialize name to the value of "John".
-name = "John";
+// Create a new String object and assign it to name. We will discuss objects later.
+String name = new String("John");
 
 // Assign the value of "Jane" to name.
 name = "Jane";

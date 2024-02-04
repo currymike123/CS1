@@ -35,7 +35,7 @@ style: |
 
 Even the simplest programs need to make decisions. <b>Control structures</b> allow us to control the flow of a program and determine which statements are executed and when.
 
-Java uses <b>if statements</b> to control the flow of a program. Their are two versions, the simple <b>if statement</b> and the <b>if-else statement</b>.
+Java uses <b>if statements</b> to control the flow of a program. Their are three versions, the simple <b>if statement</b>, the <b>if-else statement</b>, and the <b>else-if</b> statment.
 
 Let's review the simple <b>if statement</b> first.
 
@@ -307,7 +307,7 @@ else
 
 ---
 
-A switch statement is another way to control the flow of a program. It is used when you have a limited number of possible values for a variable. The switch statement is similar to a series of if-else statements.
+A switch statement is another way to control the flow of a program. It is used when you have a limited number of possible values for a variable. The switch statement is similar to a series of if-else statements. I'm going to include it here, but concentrate on the if-else statements for now.
 
 ```java
 switch (variable) {
