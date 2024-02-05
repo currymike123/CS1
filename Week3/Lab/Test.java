@@ -2,6 +2,7 @@ class Test {
     public static void main(String[] args) {
 
         // Question 1:
+	// Students might have a slightly different printf statement. 
         System.out.printf("%-6s%-11s%-8s%n%-6d%-11s%-6s", "ID", "Username", "Password", 125, "bobby", "xxxxxx");
     
         //Skip line
