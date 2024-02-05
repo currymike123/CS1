@@ -25,15 +25,11 @@ style: |
 
 # Week 3: Computer Science 1
 
-## The power of Modulus
+## The Power of Modulus
 
 ---
 
-# Modulus
-
----
-
-When we presented the arithmetic operators, we mentioned that the modulus operator is used to find the remainder of a division. This is a very powerful operator that can be used in many different ways. Let's review division first.
+When I presented the arithmetic operators, I mentioned that the modulus operator is used to find the remainder of a division. This is a very powerful operator that can be used in many different ways. Let's review division first.
 
 ```java
 
@@ -142,10 +138,10 @@ We'll be using modulus in class and lab.
 
 <b>a</b> is divisible by <b>b</b> if <b>a%b</b> is 0.
 
-- If 104 divisible by 2?
+- Is 104 divisible by 2?
   104 % 2 = 0 so yes.
 
-- If 104 divisible by 5?
+- Is 104 divisible by 5?
   104 % 5 = 4 so no.
 
 ---

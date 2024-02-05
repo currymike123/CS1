@@ -364,7 +364,7 @@ Create a program that checks to see if a number is positive or negative. It shou
 10 is positive: true
 ```
 
-Think about what you need to do to determine if a number is positive or negative. What math operation do you need to use? What is the condition? What is the statement? What math operation do you need to use?
+Think about what you need to do to determine if a number is positive or negative. What math operation do you need to use? What is the condition? What is the statement?
 
 ---
 
