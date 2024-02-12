@@ -22,7 +22,7 @@ public class Lab2 {
         System.out.println("\nQuestion 3:");
         System.out.println("+------------------+");
         System.out.println("|                  |");
-        System.out.println("|     Michaek      |");
+        System.out.println("|     Michael      |");
         System.out.println("|                  |");
         System.out.println("+------------------+");
 

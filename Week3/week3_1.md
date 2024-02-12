@@ -58,7 +58,7 @@ Possible remainders for n = 5,10, & 100 are:
 
 Why cant <b>n</b> be a remainder?
 
-Becuase we could have divided by n one more time.
+Because we could have divided by <b>n</b> one more time.
 
 ---
 
@@ -75,21 +75,21 @@ Let's look at a few examples with long division.
 
 ---
 
-![24/3](Images/24_2.jpg)
+![24/3](../images/24_2.jpg)
 
 - 24/2 = 12 (Quotient)
 - 24%2 = 0 (Remainder or Modulus)
 
 ---
 
-![123/5](Images/123_5.jpg)
+![123/5](../images/123_5.jpg)
 
 - 123/5 = 24 (Quotient)
 - 123%5 = 3 (Remainder or Modulus)
 
 ---
 
-![1040/20](Images/1040_20.jpg)
+![1040/20](../images/1040_20.jpg)
 
 - 1040/20 = 52 (Quotient)
 - 1040%20 = 0 (Remainder or Modulus)
@@ -256,7 +256,7 @@ Now, how can we get the <b>tens</b> digits of a number?
 
 ---
 
-![123 width:1000px](Images/10s_place.jpg)
+![123 width:1000px](../Images/10s_place.jpg)
 
 ---
 
@@ -304,6 +304,4 @@ class Digits {
 }
 ```
 
-```
-
-```
+---

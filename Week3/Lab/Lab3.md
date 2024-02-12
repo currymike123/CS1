@@ -1,4 +1,4 @@
-# Lab 2
+# Lab 3
 
 **Notes**
 
@@ -12,11 +12,11 @@
 
 1. Write a program the finds the area of a circle. The radius is 4.5 inches. You can use the value of 3.14159 for π. Save all your values in variables and display your result using a print statement. The formula is:
 
-- area = π _ radius _ radius
+- area = π \* radius \*radius
 
 2. Modify the program to find the circumference of the circle. The formula is:
 
-- circumference = 2 _ π _ radius
+- circumference = 2 \* π \* radius
 
 3. Write a program that converts feet to meters. One foot is 0.305 meters. Save all your values in variables and display your result using a print statement.
 
