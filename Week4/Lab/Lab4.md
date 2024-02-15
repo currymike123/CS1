@@ -1,15 +1,5 @@
 # Lab 4
 
-**Notes**
-
-- Type all the programs from scratch. Do not copy and paste. It will help you to learn the syntax.
-- If your program doesn't work on the first try don't worry. Debugging is a skill that you will develop over time.
-- Remember to save and recompile every time you make a change to your program.
-- If you get errors when you compile, go back and make sure you typed everything correctly. Proper capitalization, spelling, matching {}, etc.
-- If you get stuck, ask your TA for help. That's what they are here for!
-
----
-
 1. It takes roughly 2580 minutes to drive from California to New York.
    Declare 2580 as an integer. Write a program that converts the
    minutes into hours. Find the remaining minutes as well. Display your
@@ -56,6 +46,8 @@ System.out.println("hello");
 ```
 
 - A semicolon by itself is the null statement. It is a legal statement in Java. When executed, it does nothing. Braces that do not contain any statements act like a null statement.
+
+  <div style="page-break-after: always;"></div>
 
 6. Explain the difference between the two code snippets:
 
