@@ -217,3 +217,143 @@ for (int num = 0; num < 10; num++) {
 ---
 
 Print 1 through 10 on the same line using a for loop. Your initialization statement should start at 0. (We should NEVER hard code these numbers (ie. 1 through 10)).
+
+---
+
+```java
+for (int i = 1; i <= 10; i++) {
+    System.out.print(i + " ");
+}
+```
+
+<b>Output:</b>
+
+```bash
+1 2 3 4 5 6 7 8 9 10
+```
+
+---
+
+Find the sum of all the integers between 1 and 10 inclusive. Display the sum.
+
+---
+
+```java
+int sum = 0;
+for (int i = 1; i <= 10; i++) {
+    sum += i;
+}
+System.out.println("The sum is " + sum);
+```
+
+<b>Output:</b>
+
+```bash
+The sum is 55
+```
+
+---
+
+Print the positive numbers that are odd and less than 50.
+
+---
+
+With Modulo Operator:
+
+```java
+for (int i = 0; i < 50; i++) {
+    if (i % 2 == 1) {
+        System.out.print(i + " ");
+    }
+}
+```
+
+Without Modulo Operator:
+
+```java
+for (int i = 1; i < 50; i += 2) {
+    System.out.print(i + " ");
+}
+```
+
+<b>Output:</b>
+
+```bash
+1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49
+```
+
+---
+
+Print 5 to -5 using a for loop.
+
+---
+
+```java
+for (int i = 5; i >= -5; i--) {
+    System.out.print(i + " ");
+}
+```
+
+<b>Output:</b>
+
+```bash
+5 4 3 2 1 0 -1 -2 -3 -4 -5
+```
+
+---
+
+Print the even numbers between 25 and 100 using a for loop.
+
+---
+
+With the Modulo Operator:
+
+```java
+for (int i = 25; i <= 100; i++) {
+    if (i % 2 == 0) {
+        System.out.print(i + " ");
+    }
+}
+```
+
+Without the Modulo Operator:
+
+```java
+
+for (int i = 26; i <= 100; i += 2) {
+    System.out.print(i + " ");
+}
+```
+
+<b>Output:</b>
+
+```bash
+26 28 30 32 34 36 38 40 42 44 46 48 50 52 54 56 58 60 62 64 66 68 70 72 74 76 78 80 82 84 86 88 90 92 94 96 98 100
+```
+
+---
+
+Print the first 10 numbers in the Fibonacci sequence.
+
+The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones, usually starting with 0 and 1.
+
+So the sequence goes: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+---
+
+```java
+int first = 0;
+int second = 1;
+int next;
+
+for (int i = 0; i < 10; i++) {
+    System.out.print(first + " ");
+    next = first + second;
+    first = second;
+    second = next;
+}
+```
+
+Notice that we are using three variables to keep track of the numbers in the sequence. `first` is initialized to 0 and `second` is initialized to 1, the first two numbers in the sequence. `next` is used to calculate the next number in the sequence.
+
+---
