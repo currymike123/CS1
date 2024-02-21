@@ -196,14 +196,24 @@ What is the output?
 
 ---
 
-Notice you can use any variable name you want as the loop control variable. `num` is used in this example. The loop control variable `num` is initialized to 0. The condition `num < 10` is checked. If the condition is true, the loop continues executing. If the condition is false, the loop stops executing. The loop control variable `num` is incremented by 1 after each iteration of the loop.
+Notice you can use any variable name you want as the loop control variable. `num` is used in this example. The loop control variable `num` is initialized to 0. The condition `num < 10` is checked. The loop control variable `num` is incremented by 1 after each iteration of the loop.
+
+Then we use an if statement to check if the number is even or odd using the modulo operator `%`.
 
 ```java
-for (int i = 0; i < 10; i++) {
-    if (i % 2 == 0) {
-        System.out.println(i + " is even");
+for (int num = 0; num < 10; num++) {
+    if (num % 2 == 0) {
+        System.out.println(num + " is even");
     } else {
-        System.out.println(i + " is odd");
+        System.out.println(num + " is odd");
     }
 }
 ```
+
+---
+
+## Examples
+
+---
+
+Print 1 through 10 on the same line using a for loop. Your initialization statement should start at 0. (We should NEVER hard code these numbers (ie. 1 through 10)).
