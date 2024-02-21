@@ -137,7 +137,7 @@ We can also use the <b>nextDouble()</b> method.
 ```java
 import java.util.Scanner;
 
-plublic class InputExample {
+public class InputExample {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter a number: ");
