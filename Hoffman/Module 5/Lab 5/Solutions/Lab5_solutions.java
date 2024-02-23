@@ -19,28 +19,8 @@ public class Lab5 {
             System.out.println("Take a bus.");
         }
 
+
         //Question 2:
-        System.out.println("\nQuestion 2:");
-        System.out.print("Enter a weight: ");
-        double w = sc.nextDouble();
-        double cost;
-
-        if(w > 0 && w <= 1) {
-            cost = 3.5;
-        } else if(w <= 3) {
-            cost = 5.5;
-        } else if(w <= 10) {
-            cost = 8.5;
-        } else if(w > 10) {
-            cost = 10.5;
-        } else {
-            cost = 0;
-            System.out.println("The package cannot be a zero or negative weight.");
-        }
-
-        System.out.println("Cost = $" + cost);
-
-        //Question 3:
         System.out.println("\nQuestion 3:");
         System.out.print("Enter 3 edges for a triangle: ");
         double s1 = sc.nextDouble();
@@ -53,7 +33,7 @@ public class Lab5 {
             System.out.println("Triangle not valid.");
         }
 
-        //Question 4:
+        //Question 3:
         System.out.println("\nQuestion 4:");
         System.out.print("Enter weight and price for package 1: ");
         double w1 = sc.nextDouble();
@@ -69,25 +49,55 @@ public class Lab5 {
             System.out.println("Package 2 has a better price.");
         }
 
-        //Question 5:
-        System.out.println("\nQuestion 5:");
-        System.out.print("Enter a temperature: ");
-        double t = sc.nextDouble();
-        String region;
 
-        if(t < 50) {
-            region = "blue";
-        } else if(t < 60) {
-            region = "yellow";
-        } else if(t < 70) {
-            region = "cyan";
-        } else if(t < 80) {
-            region = "green";
-        } else {
-            region = "red";
+        //Question 4
+        System.out.println("\nQuestion 7:");
+        System.out.print("Enter the month and year for the amount of days in a month: ");
+        int month2 = sc.nextInt();
+        int year = sc.nextInt();
+
+        switch(month2) {
+            case 1:
+                System.out.println("31 Days");
+                break;
+            case 2:
+                if((year%4==0 && year % 100 != 0) || (year % 400 == 0)) {
+                    System.out.println("29 days");
+                } else {
+                    System.out.println("28 days");
+                }
+                break;
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                System.out.println("31 Days");
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                System.out.println("30 Days");
+                break;
+            default:
+                System.out.println("Month or year input is incorrect. Try again.");
         }
 
-        System.out.println("You are in the " + region + " region.");
+
+	//Question 5
+        System.out.println("\nQuestion 8:");
+        System.out.print("Enter the subtotal and a gratuity rate: ");
+        double subtotal = sc.nextDouble();
+        double rate = sc.nextDouble();
+
+        double gratuity = subtotal * (rate / 100);
+        double total = subtotal + gratuity;
+        System.out.println("The gratuity is $" + gratuity + " and total is $" + total);
+    }
+}
+
 
         //Question 6:
         System.out.println("\nQuestion 6:");
@@ -148,50 +158,9 @@ public class Lab5 {
                 break;
         }
 
-        //Question 7
-        System.out.println("\nQuestion 7:");
-        System.out.print("Enter the month and year for the amount of days in a month: ");
-        int month2 = sc.nextInt();
-        int year = sc.nextInt();
 
-        switch(month2) {
-            case 1:
-                System.out.println("31 Days");
-                break;
-            case 2:
-                if((year%4==0 && year % 100 != 0) || (year % 400 == 0)) {
-                    System.out.println("29 days");
-                } else {
-                    System.out.println("28 days");
-                }
-                break;
-            case 3:
-            case 5:
-            case 7:
-            case 8:
-            case 10:
-            case 12:
-                System.out.println("31 Days");
-                break;
-            case 4:
-            case 6:
-            case 9:
-            case 11:
-                System.out.println("30 Days");
-                break;
-            default:
-                System.out.println("Month or year input is incorrect. Try again.");
-        }
+        
 
 
-        //Question 8
-        System.out.println("\nQuestion 8:");
-        System.out.print("Enter the subtotal and a gratuity rate: ");
-        double subtotal = sc.nextDouble();
-        double rate = sc.nextDouble();
 
-        double gratuity = subtotal * (rate / 100);
-        double total = subtotal + gratuity;
-        System.out.println("The gratuity is $" + gratuity + " and total is $" + total);
-    }
-}
+ 
