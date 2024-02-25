@@ -21,7 +21,7 @@ public class Lab5 {
 
 
         //Question 2:
-        System.out.println("\nQuestion 3:");
+        System.out.println("\nQuestion 2:");
         System.out.print("Enter 3 edges for a triangle: ");
         double s1 = input.nextDouble();
         double s2 = input.nextDouble();
@@ -34,7 +34,7 @@ public class Lab5 {
         }
 
         //Question 3:
-        System.out.println("\nQuestion 4:");
+        System.out.println("\nQuestion 3:");
         System.out.print("Enter weight and price for package 1: ");
         double w1 = input.nextDouble();
         double price1 = input.nextDouble();
@@ -51,7 +51,7 @@ public class Lab5 {
 
 
         //Question 4
-        System.out.println("\nQuestion 7:");
+        System.out.println("\nQuestion 4:");
         System.out.print("Enter the month and year for the amount of days in a month: ");
         int month2 = input.nextInt();
         int year = input.nextInt();
@@ -87,7 +87,7 @@ public class Lab5 {
 
 
 	//Question 5
-        System.out.println("\nQuestion 8:");
+        System.out.println("\nQuestion 5:");
         System.out.print("Enter the subtotal and a gratuity rate: ");
         double subtotal = input.nextDouble();
         double rate = input.nextDouble();
@@ -160,7 +160,7 @@ public class Lab5 {
     
 
         //Question 7:
-
+	System.out.println("\nQuestion 7:");
         // Prompt the user to enter the weight of the package
         System.out.println("Please enter the weight of the package:");
         double weight = input.nextDouble();
@@ -188,6 +188,7 @@ public class Lab5 {
         }
 
         //Question 8:
+	System.out.println("\nQuestion 8:");
         // Prompt the user to enter the value of t
         System.out.println("Please enter the value of t:");
         int t = input.nextInt();

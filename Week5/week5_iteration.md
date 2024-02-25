@@ -23,7 +23,7 @@ style: |
       }
 ---
 
-# Week 4: Computer Science 1
+# Week 6: Computer Science 1
 
 ## Iteration
 
@@ -54,7 +54,7 @@ System.out.println("Michael");
 System.out.println("Michael");
 ```
 
-Or you could write the print statement once and tell the computer to repeat it 5 times.
+Or you could write the print statement once and tell the computer to repeat it 10 times.
 
 ```java
 for (int i = 0; i < 10; i++) {
