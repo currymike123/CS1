@@ -101,14 +101,14 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 | 3    | Control Structures                        |
 | 4    | I/O & <b>Test 1</b>                       |
 | 5    | Iteration & Loops                         |
-| 6    | Methods                                   |
-| 7    | Arrays                                    |
-| 8    | <b>Test 2</b> & Classes                   |
+| 6    | Interation & Methods                      |
+| 7    | <b>Test 2</b>                             |
+| 8    | Methods Continued & Arrays                |
 | 9    | Sorting & Nesting                         |
-| 10   | Nesting & ArrayList                       |
-| 11   | Sorting Algorithms & <b>Test 3</b>        |
-| 12   | Inheritance & Exceptions                  |
-| 13   | File Handling                             |
+| 10   | Math Package & Classes                    |
+| 11   | ArrayList & <b>Test 3</b>                 |
+| 12   | Strings                                   |
+| 13   | File Reading & Handling                   |
 | 14   | Recursion                                 |
 | 15   | Final Exam Review                         |
 
