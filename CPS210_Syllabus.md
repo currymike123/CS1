@@ -60,12 +60,12 @@ quizzes will be taken via paper due to a plethora of cheating due to ChatGPT.
   - Section 1 & 2: Monday February 12th
   - Section 3 & 4: Tuesday February 13th
 - Test 2: 20%
-  - Section 1 & 2: Monday March 4th
-  - Section 3 & 4: Tuesday March 5th
-- Test 3: 20% - Thursday November 16
-  - Section 1 & 2: Monday April 8th
-  - Section 3 & 4: Tuesday April 9th
-- Final Exam: 20% 10:00 AM
+  - Section 1 & 2: Monday March 7th
+  - Section 3 & 4: Tuesday March 8th
+- Test 3: 20%
+  - Section 1 & 2: Monday April 13th
+  - Section 3 & 4: Tuesday April 14th
+- Final Exam: 20%
   - Section 1 & 2: Monday May 16th 8:00 - 10:00 AM
   - Section 3 & 4: Tuesday May 14th 10:15 - 12:15 PM
 
@@ -101,10 +101,10 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 | 3    | Control Structures                        |
 | 4    | I/O & <b>Test 1</b>                       |
 | 5    | Iteration & Loops                         |
-| 6    | Interation & Methods                      |
-| 7    | <b>Test 2</b>                             |
+| 6    | Iteration & Error handling                |
+| 7    | <b>Test 2</b> & Methods                   |
 | 8    | Methods Continued & Arrays                |
-| 9    | Sorting & Nesting                         |
+| 9    | Nesting                                   |
 | 10   | Math Package & Classes                    |
 | 11   | ArrayList & <b>Test 3</b>                 |
 | 12   | Strings                                   |

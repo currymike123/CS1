@@ -7,7 +7,7 @@ Name:
 Let’s say you are creating a web application for a dietitians’s office and
 must have the ability to calculate daily protein needs for a patient. The
 formula below is used to determine protein needs:<br><br>
-<b>Protein Needs = weight in kilograms \* protein </b>factor<br><br>
+<b>Protein Needs = weight in kilograms \* protein factor</b><br><br>
 The following calculates a person’s protein factor:<br>
 Normal Daily activity: 0.8gm/kg/day<br>
 Moderate Daily physical activity: 1.2 gm/kg/day<br>
