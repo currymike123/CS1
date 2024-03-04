@@ -23,7 +23,7 @@ style: |
       }
 ---
 
-# Week 6: Computer Science 1
+# Week 7: Computer Science 1
 
 ## Review
 
@@ -33,7 +33,7 @@ style: |
 
 - Modulus and division (integer & floating point) in Java.
 - Conditional Statements. if, else if, and else statements.
-- Understand how to use conditional statements for various conditions such as checking for divisibility and intervals. Combine multiple conditions using logical operators.
+- Understand how to use conditional statements for various conditions such as checking for divisibility, equality, and intervals. Combine multiple conditions using logical operators.
 - Scanner class. Understand how to use to read in integers, doubles and Strings.
 - for loops (using them for printing statements, finding sum, counts, etc.)
 - while loops (using them for printing statements, finding sum, counts, etc.)
@@ -222,6 +222,7 @@ System.out.println(i); // prints 10
 
 ```java
 Scanner scanner = new Scanner(System.in);
+System.out.println("Enter a positive number");
 int a = scanner.nextInt();
 while (a < 0) {
     System.out.println("Enter a positive number");
@@ -239,6 +240,7 @@ while (a < 0) {
 
 ```java
 Scanner scanner = new Scanner(System.in);
+System.out.println("Enter integers. Enter 0 to stop.");
 int a = scanner.nextInt();
 int sum = 0;
 while (a != 0) {
