@@ -23,7 +23,7 @@ style: |
       }
 ---
 
-# Week 7: Computer Science 1
+# Week 8: Computer Science 1
 
 ## Methods
 
@@ -33,7 +33,7 @@ style: |
 
 ---
 
-We have been using one method since the first week of class: `public static void main(String[] args)`. This is the method that is called when a Java program is run. We have been limited to this method so far, but we can create our own methods.
+We have been using one method since the first week of class: <br>`public static void main(String[] args)`<p> This is the method that is called when a Java program is run. We have been limited to this method so far, but we can create our own methods.
 
 When you create a method, you are creating a block of code that can be called from other parts of your program. This allows you to reuse code and make your program more modular.
 
@@ -67,7 +67,7 @@ public static returnType methodName(parameters) {
 }
 ```
 
-- `public` is an access modifier. It means that the method can be accessed from anywhere. Methods can also be `private` or have no access modifier. 'private' means that the method can only be accessed from within the class.
+- `public` is an access modifier. It means that the method can be accessed from anywhere. Methods can also be `private` or have no access modifier. `private` means that the method can only be accessed from within the class.
 - `static` means that the method belongs to the class, not an instance of the class. This will be explained in more detail later.
 - `returnType` is the type of the value that the method returns. If the method does not return a value, the return type is `void`.
 - `methodName` is the name of the method.
@@ -123,7 +123,7 @@ When you create an object from a class, you are creating an instance of the clas
 
 When you create a method, you can access the method from an instance of the class. For example, if you have a method `drive` in the `Car` class, you can call the method by writing `myCar.drive();`.
 
-We will discuss classes and objects in more detail in the next few weeks. This is just a brief introduction to the concept of static methods.
+If the method is `static`, you can access the method from the class itself. For example, if you have a method `drive` in the `Car` class, you can call the method by writing `Car.drive();`. We will see more examples of this when we create classes.
 
 ---
 
@@ -139,7 +139,7 @@ The return type of a method is the type of the value that the method returns. If
 
 If the return type is not `void`, the method must return a value of the specified type. If the method does not return a value, the method will not compile.
 
-The return type can be any data type, such as `int`, `double`, `String`, or any other data type.
+The return type can be any data type, such as `int`, `double`, `String`.
 
 ---
 
@@ -153,7 +153,7 @@ public static returnType methodName(parameters) {
 
 The method name is the name of the method. The method name can be any valid identifier. The method name should be descriptive of what the method does.
 
-Method names should start with a lowercase letter and use camel case (or snake case). For example, `calculateArea` is a good method name.
+Method names should start with a lowercase letter and use camel case or snake case. For example, `calculateArea` is a good method name.
 
 ---
 
@@ -167,7 +167,7 @@ public static returnType methodName(parameters) {
 
 Parameters are the inputs to the method. If the method does not take any inputs, the parentheses are empty. For example, `public static void printHello()` takes no parameters.
 
-For example, in the method `public static int square(int x)`, `int x` is the parameter. The type of the parameter is `int`, and the name of the parameter is `x`.
+In the method `public static int square(int x)`, `int x` is the parameter. The type of the parameter is `int`, and the name of the parameter is `x`.
 
 If the method takes multiple parameters, they are separated by commas. For example, `public static int add(int x, int y)` takes two parameters, `x` and `y`.
 
@@ -342,7 +342,7 @@ The method `square` takes in a double `x` and returns the square of `x`. Since t
 
 ---
 
-Create a method that takes three numbers and returns the average of the three numbers. The method should return the result and except three integers. Print out the result in the `main` method.
+Create a method that takes three integers and returns the average of the three numbers. The method should return the result and except three integers. Print out the result in the `main` method.
 
 The function is <b>f(x, y, z) = (x + y + z) / 3</b>.
 
