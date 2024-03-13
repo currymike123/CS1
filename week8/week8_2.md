@@ -97,6 +97,25 @@ This is a good example of <b>method overloading</b>. We have two methods with th
 
 ---
 
+You can also create one method that accepts two `double` values and casts `int` values to `double` values.
+
+```java
+public static void printWord(double num1, double num2, String word) {
+    for (int i = 0; i < num2; i++) {
+        System.out.println(word);
+    }
+    return num1 + num2;
+}
+```
+
+If I call the method with two `int` values, the `int` values will be cast to `double` values and the method will execute.
+
+```java
+printWord(5, 3, "Hello");
+```
+
+---
+
 ## Method Overloading
 
 We previously discussed the concept of method overloading. This is when you have two methods with the same name, but different parameter lists.
@@ -144,25 +163,6 @@ public static void printNumber(int y) {
 ---
 
 This will not run either. The methods have the same name and the same parameter list. The only difference is the return type. This will not work.
-
----
-
-You can also create one method that accepts two `double` values and casts `int` values to `double` values.
-
-```java
-public static void printWord(double num1, double num2, String word) {
-    for (int i = 0; i < num2; i++) {
-        System.out.println(word);
-    }
-    return num1 + num2;
-}
-```
-
-If I call the method with two `int` values, the `int` values will be cast to `double` values and the method will execute.
-
-```java
-printWord(5, 3, "Hello");
-```
 
 ---
 
@@ -301,7 +301,7 @@ The return type is `void`. This means that the method does not return a value.
 
 ---
 
-We also used methods within the `Scanner` class.
+We also use methods within the `Scanner` class.
 
 ```java
 Scanner input = new Scanner(System.in);
@@ -315,9 +315,9 @@ We know the other methods of the `Scanner` class. What are they?
 ---
 
 - `nextLine` - returns a `String` value
+- `next` - returns a `String` value
 - `nextDouble` - returns a `double` value
 - `nextBoolean` - returns a `boolean` value
-- `next` - returns a `String` value
 
 ---
 
@@ -353,7 +353,7 @@ double e = Math.random(); // e = random number between 0.0 and 1.0
 
 ---
 
-Let's work through an example of using the `Math` class and methods.
+## Examples
 
 ---
 
@@ -391,5 +391,72 @@ public static double distance(int x, double y) {
 
 public static double distance(int x, int y) {
     return Math.abs(x - y);
+}
+```
+
+---
+
+Create a method that accepts the the radius of a circle as an integer and returns the area of the circle.
+
+Area of a circle = π \* r^2
+
+You can use the Math class to find the value of pi and raise the radius to the power of 2.
+
+Math.PI returns the value of pi.
+Math.pow(x, y) returns the value of x raised to the power of y.
+
+Once you have the area of the circle create another method that calculates the area of a sphere. This method should call the "Area of a circle" method.
+
+Area of a sphere = 4 _ π _ r^2
+
+---
+
+```java
+public static double areaOfCircle(int radius) {
+    return Math.PI * Math.pow(radius, 2);
+}
+
+public static double areaOfSphere(int radius) {
+    return 4 * areaOfCircle(radius);
+}
+```
+
+---
+
+Create a program that asks the user what they would like to calculate. The program should then ask the user for the necessary values and call the appropriate method.
+
+```bash
+What would you like to calculate?
+1) Area of a circle
+2) Area of a sphere
+
+Enter the number of the calculation: 1
+Enter the radius of the circle: 5
+The area of the circle is: 78.54
+```
+
+---
+
+```java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("What would you like to calculate?");
+        System.out.println("1) Area of a circle");
+        System.out.println("2) Area of a sphere");
+        System.out.print("Enter the number of the calculation: ");
+        int choice = input.nextInt();
+        if (choice == 1) {
+            System.out.print("Enter the radius of the circle: ");
+            int radius = input.nextInt();
+            System.out.println("The area of the circle is: " + areaOfCircle(radius));
+        } else if (choice == 2) {
+            System.out.print("Enter the radius of the sphere: ");
+            int radius = input.nextInt();
+            System.out.println("The area of the sphere is: " + areaOfSphere(radius));
+        }
+    }
 }
 ```

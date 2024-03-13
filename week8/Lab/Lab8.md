@@ -19,7 +19,7 @@
 6. Create a program with a method that converts the time in seconds to
    days:hours:minutes:seconds.
 
-- Example: input: 313297 seconds output: 3:14:23:17
+- Example: input: 313297 seconds output: 3:15:1:37
 
 - Have the return type be a `String` and print the result in the main method.
 
