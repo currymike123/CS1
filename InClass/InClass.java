@@ -2,16 +2,28 @@ import java.util.Scanner;
 
 public class InClass {
     public static void main(String[] args) {
-
-        int x = 5;
-        int y = 6;
-        int z = 15;
-        double avg = average(x, y, z);
-        System.out.println(avg);
-
+      //Scanner object
+      Scanner input = new Scanner(System.in);
+      System.out.print("Enter a String: ");
+      String str = input.next();
+      System.out.print("Enter a positive integer: ");
+      int num = input.nextInt();
+      //Method Call
+      printString(str, num);
+      
     }
 
-    public static double average(int x, int y, int z) {
-        return (x + y + z) / 3.0; // Return the average of x, y, and z
+    public static void printString(String str, int num){
+      if (num <= 0){
+        System.out.println("Invalid Input");
+      }else{
+        for(int i = 0; i < num; i++){
+          System.out.println(str);
+        }
+      }
+
     }
+      
 }
+
+ 
