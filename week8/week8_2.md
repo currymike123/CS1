@@ -341,7 +341,7 @@ The `Math` class contains methods that perform basic mathematical operations.
 Each of these methods is called using the class name `Math` followed by a period and the method name.
 
 ```java
-int x = Math.abs(-5); // x = 5
+int x = Math.abs(-5); // x = 5 what is the return type? What about a double?
 double y = Math.ceil(5.5); // y = 6.0
 double z = Math.floor(5.5); // z = 5.0
 int a = Math.max(5, 10); // a = 10
