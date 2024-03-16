@@ -77,14 +77,14 @@ What if the number is an `int`? What if the number is a `double`?
 
 ```java
 
-public static void printWord(int num1, int num2, String word) {
+public static int printWord(int num1, int num2, String word) {
     for (int i = 0; i < num2; i++) {
         System.out.println(word);
     }
     return num1 + num2;
 }
 
-public static void printWord(double num1, double num2, String word) {
+public static double printWord(double num1, double num2, String word) {
     for (int i = 0; i < num2; i++) {
         System.out.println(word);
     }
@@ -100,7 +100,7 @@ This is a good example of <b>method overloading</b>. We have two methods with th
 You can also create one method that accepts two `double` values and casts `int` values to `double` values.
 
 ```java
-public static void printWord(double num1, double num2, String word) {
+public static double printWord(double num1, double num2, String word) {
     for (int i = 0; i < num2; i++) {
         System.out.println(word);
     }
@@ -153,6 +153,7 @@ How about this code?
 ```java
 public static int printNumber(int x) {
     System.out.println(x);
+    return x;
 }
 
 public static void printNumber(int y) {
@@ -191,8 +192,8 @@ public static double areaOfHouse(double length, double width, int numRooms) {
     return areaOfRoom(length, width) * numRooms;
 }
 
-public static double areaOfNeighborhood(double length, double width, int numHouses) {
-    return areaOfHouse(length, width, numHouses) * numHouses;
+public static double areaOfNeighborhood(double length, double width, int numRooms, int numHouses) {
+    return areaOfHouse(length, width, numRooms) * numHouses;
 }
 ```
 
@@ -370,7 +371,6 @@ Create a method (or methods) that accept two `double` values, two `int` values, 
 distance(5.5, 3.5) -> 2.0
 distance(3, 5) -> 2.0
 distance(5.5, 3) -> 2.5
-distance(5, 3.5) -> 1.5
 distance(-5,3) -> 8.0
 ```
 
@@ -382,10 +382,6 @@ public static double distance(double x, double y) {
 }
 
 public static double distance(double x, int y) {
-    return Math.abs(x - y);
-}
-
-public static double distance(int x, double y) {
     return Math.abs(x - y);
 }
 
@@ -407,7 +403,7 @@ Math.pow(x, y) returns the value of x raised to the power of y.
 
 Once you have the area of the circle create another method that calculates the area of a sphere. This method should call the "Area of a circle" method.
 
-Area of a sphere = 4 _ π _ r^2
+Area of a sphere = 4 \* π \* r^2
 
 ---
 

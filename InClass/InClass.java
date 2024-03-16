@@ -1,15 +1,17 @@
-import java.util.Scanner;
-
 public class InClass {
     public static void main(String[] args) {
-       System.out.print(concatenate(1,"Mike"));
+        int[] numbers = {10, 20, 30, 40, 50};
+        printArray(numbers);
+        
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
     }
 
-
-    public static String concatenate(int number, String word) {
-        return number + word;
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+            array[i]++;
+        }
     }
-      
 }
-
- 
