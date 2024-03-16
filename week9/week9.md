@@ -427,3 +427,122 @@ The value of `numbers` in the `main` method is changed even though the `numbers`
 When the `printArray` method changes the elements of the `numbers` array, it is changing the elements of the `numbers` array in the `main` method.
 
 ---
+
+## Examples
+
+---
+
+Create a method that takes an array of integers and returns the sum of the elements of the array.
+
+---
+
+```java
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        System.out.println(sumArray(numbers));
+    }
+
+    public static int sumArray(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return sum;
+    }
+}
+```
+
+---
+
+Create a method that takes an array of integers and returns the average of the elements of the array.
+
+What is the return type of the method?
+
+---
+
+```java
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        System.out.println(averageArray(numbers));
+    }
+
+    public static double averageArray(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return (double) sum / array.length;
+    }
+}
+```
+
+---
+
+Create a method that takes an array of integers and returns the maximum value of the elements of the array. Only use the `>` operator to compare the elements of the array.
+
+---
+
+```java
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        System.out.println(maxArray(numbers));
+    }
+
+    public static int maxArray(int[] array) {
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+}
+```
+
+---
+
+Create a method(s) that takes an array, calculates the average, and returns the number of elements that are greater than the average.
+
+For example:<br>
+`int[] numbers = {10, 20, 30, 40, 50};`<br>
+The average is `30` and there are `2` elements greater than `30`.
+
+Your method should return `2`.
+
+---
+
+```java
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        System.out.println(greaterThanAverage(numbers));
+    }
+
+    public static int greaterThanAverage(int[] array) {
+        double average = averageArray(array);
+        int count = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > average) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static double averageArray(int[] array) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            sum += array[i];
+        }
+        return (double) sum / array.length;
+    }
+}
+```
