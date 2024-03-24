@@ -3,36 +3,39 @@ import java.util.Scanner;
 public class InClass {
 
     public static void main(String[] args) {
-        int[][] board = new int[3][3];
-
-        while (true) {
-            printBoard(board);
-            int[] move = getMove();
-            setElement(board, move[0], move[1], move[2]);
-        }
+        String[] words = {"apple", "banana", "cherry", "date", "elderberry"};
+        playGame(words);
     }
 
-    public static void printBoard(int[][] board) {
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[i].length; j++) {
-                System.out.print(board[i][j]);
+    public static void playGame(String[] words) {
+        String word = words[(int) (Math.random() * words.length)];
+        char[] guessedWord = new char[word.length()];
+        for (int i = 0; i < guessedWord.length; i++) {
+            guessedWord[i] = '*';
+        }
+
+        Scanner scanner = new Scanner(System.in);
+        while (hasStars(guessedWord)) {
+            System.out.println(guessedWord);
+            System.out.println("Guess a letter:");
+            char guess = scanner.next().charAt(0);
+            for (int i = 0; i < word.length(); i++) {
+                if (word.charAt(i) == guess) {
+                    guessedWord[i] = guess;
+                }
             }
-            System.out.println();
         }
+
+        System.out.println(guessedWord);
+        System.out.println("Congratulations, you guessed the word!");
     }
 
-    public static void setElement(int[][] board, int row, int column, int value) {
-        board[row][column] = value;
+    public static boolean hasStars(char[] array) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == '*') {
+                return true;
+            }
+        }
+        return false;
     }
-
-    public static int[] getMove() {
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter the row , column, and mark: ");
-        int row = input.nextInt();
-        int column = input.nextInt();
-        int mark = input.nextInt();
-        int [] move = {row, column, mark};
-        return move;
-    }
-
 }

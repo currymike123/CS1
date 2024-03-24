@@ -23,7 +23,7 @@ style: |
       }
 ---
 
-# Week 9: Computer Science 1
+# Week 10: Computer Science 1
 
 ## Multidimensionality: 2D Arrays and Nested Loops
 
