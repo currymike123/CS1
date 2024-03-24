@@ -81,7 +81,7 @@ Let's look at the parts of this declaration.
 - `int` is the type of the array. This is the type of the data that the array will hold.
 - `[]` is the array operator. It tells Java that this is an array.
 - `numbers` is the name of the array.
-- `new int[5]` This tells Java to allocate memory for 5 integers.
+- `new int[10]` This tells Java to allocate memory for 10 integers.
 
 ---
 
@@ -180,7 +180,7 @@ What happens if I try to access the whole array at once?
 System.out.println(numbers); // prints something like [I@6d06d69c
 ```
 
-This is not what I expected. This is the memory address of the array. Remember that an array is a collection of items stored at contiguous memory locations. The memory address is the address of the first element of the array.
+This is the memory address of the array. Remember that an array is a collection of items stored at contiguous memory locations. The memory address is the address of the first element of the array.
 
 This is called a <b>reference</b> to the array. The reference is the memory address of the first element of the array.
 
