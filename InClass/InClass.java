@@ -1,81 +1,38 @@
+import java.util.Scanner;
+
 public class InClass {
+
     public static void main(String[] args) {
-        // int[] numbers = new int[10];
-        // numbers[0] = 10;
-        // numbers[1] = 20;
-        // numbers[2] = 30;
-        // numbers[3] = 40;
-        // numbers[4] = 50;
-        // numbers[5] = 60;
-        // numbers[6] = 70;
-        // numbers[7] = 80;
-        // numbers[8] = 90;
-        // numbers[9] = 100;
+        int[][] board = new int[3][3];
 
-        int[] numbers = {33, 10, 75, 41, 27};
-        //int value = sumArray(numbers);
-        System.out.println(maxArray(numbers));
+        while (true) {
+            printBoard(board);
+            int[] move = getMove();
+            setElement(board, move[0], move[1], move[2]);
+        }
     }
 
-    public static int maxArray(int[] array){
-        //Max value
-        int max = array[0];
-        //Check it against all other values
-        for(int i = 1; i < array.length; i++){
-            if(array[i] > max){
-                //If it's larger swap
-                max = array[i];
+    public static void printBoard(int[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[i].length; j++) {
+                System.out.print(board[i][j]);
             }
-        }
-        
-        return max;
-    }
-
-    public static int sumArray(int[] array){
-        int sum = 0;
-        for(int i = 0; i < array.length; i++){
-            sum += array[i]; // sum = sum + array[i];
-        }
-        return sum;
-
-    }
-
-    public static double averageArray(int[] array){
-        double sum = 0;
-        for(int i = 0; i < array.length; i++){
-            sum += array[i]; // sum = sum + array[i];
-        }
-        return sum / array.length;
-
-    }
-
-
-
-
-    public static void printVariable(int num) {
-        System.out.print(num + " ");
-        num++;
-    }
-
-    public static void printArray(int[] array){
-        for(int i = 0; i < array.length; i++){
-            System.out.print(array[i] + " ");
-            array[i]++;
+            System.out.println();
         }
     }
 
-    public static void printArray(double[] array){
-        for(int i = 0; i < array.length; i++){
-            System.out.println(array[i]);
-        }
+    public static void setElement(int[][] board, int row, int column, int value) {
+        board[row][column] = value;
     }
 
-
-    public static void printArray(String[] array){
-        for(int i = 0; i < array.length; i++){
-            System.out.println(array[i]);
-        }
+    public static int[] getMove() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the row , column, and mark: ");
+        int row = input.nextInt();
+        int column = input.nextInt();
+        int mark = input.nextInt();
+        int [] move = {row, column, mark};
+        return move;
     }
-
 
 }
