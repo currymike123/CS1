@@ -241,6 +241,42 @@ What are the rules of hangman?
 
 ---
 
+How do we get a random number?
+
+Remember the Math.random() method?
+
+```java
+int random = (int) (Math.random() * 5);
+```
+
+This code generates a random number between 0 and 4.
+
+Let's use this to choose a random word from an array of words.
+
+```java
+String[] words = {"apple", "banana", "cherry", "date", "elderberry"};
+
+String word = words[(int) (Math.random() * words.length)];
+```
+
+---
+
+Now let's break down the other parts of the code we need.
+
+1. We need to create a char array to store the guessed word.
+2. We need to get the player's guess.
+3. We need to create a loop to check if the guessed word is correct.
+4. If the guessed word is correct, we need to reveal the letter.
+5. If the guessed word is incorrect, we need to decrement the number of lives.
+
+Work out the logic in comments first.
+
+Then create a method to play the game. You should start with two methods, your main method and a method to play the game.
+
+I'll get you started and then you can finish the code.
+
+---
+
 ```java
 
 import java.util.Scanner;
@@ -260,19 +296,29 @@ public class Hangman {
         }
 
         Scanner scanner = new Scanner(System.in);
-        while (hasStars(guessedWord)) {
+        int guesses = 0;
+        while (hasStars(guessedWord) && guesses < 6) {
             System.out.println(guessedWord);
             System.out.println("Guess a letter:");
             char guess = scanner.next().charAt(0);
+            boolean correctGuess = false;
             for (int i = 0; i < word.length(); i++) {
                 if (word.charAt(i) == guess) {
                     guessedWord[i] = guess;
+                    correctGuess = true;
                 }
+            }
+            if (!correctGuess) {
+                guesses++;
             }
         }
 
-        System.out.println(guessedWord);
-        System.out.println("Congratulations, you guessed the word!");
+        if (hasStars(guessedWord)) {
+            System.out.println("Sorry, you didn't guess the word in 6 attempts.");
+        } else {
+            System.out.println(guessedWord);
+            System.out.println("Congratulations, you guessed the word!");
+        }
     }
 
     public static boolean hasStars(char[] array) {
@@ -284,6 +330,5 @@ public class Hangman {
         return false;
     }
 }
-
 ---
 ```
