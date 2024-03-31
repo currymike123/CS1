@@ -63,8 +63,8 @@ quizzes will be taken via paper due to a plethora of cheating due to ChatGPT.
   - Section 1 & 2: Monday March 7th
   - Section 3 & 4: Tuesday March 8th
 - Test 3: 20%
-  - Section 1 & 2: Monday April 13th
-  - Section 3 & 4: Tuesday April 14th
+  - Section 1 & 2: Monday April 15th
+  - Section 3 & 4: Tuesday April 16th
 - Final Exam: 20%
   - Section 1 & 2: Monday May 16th 8:00 - 10:00 AM
   - Section 3 & 4: Tuesday May 14th 10:15 - 12:15 PM

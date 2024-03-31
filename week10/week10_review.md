@@ -33,9 +33,9 @@ Let's work through a few examples to review loops and arrays.
 
 ---
 
-One of the best ways to get comfortable with these tools is to walk through the logic of a problem. Or even better a game.
+One of the best ways to get comfortable with these tools is to walk through the logic of a problem or even better a game.
 
-You can break down the rules (or logic) of a game into a series of steps. Each step can be a method or a loop which can create and manipulate data.
+You can break down the rules (or logic) of a game into a series of steps. Then you can convert those steps into code.
 
 ---
 
@@ -43,7 +43,9 @@ Let's create the classic game of <b>Rock, Paper, Scissors.</b>
 
 ---
 
-The first step is to break down the rules of the game.
+The first step is to break down the rules of the game. What are they?
+
+---
 
 1. Two players choose either rock, paper, or scissors.
 2. Rock beats scissors.
@@ -54,7 +56,11 @@ The first step is to break down the rules of the game.
 
 Let's convert the rules into code.
 
-First, let's encode the choices into numbers. The computer natively works with numbers so it's easier to compare numbers than strings.
+First, let's encode the choices. We have three discrete options: rock, paper, and scissors. What would be the best method to encode these choices?
+
+---
+
+You may initially think it would be easier to just use the names of the choices, but it's better to encode them as integers. The computer natively works with numbers so it's easier to compare numbers than strings.
 
 - Rock = 0
 - Paper = 1
@@ -74,7 +80,9 @@ Now, how do we decide who wins?
 2. Scissors beats paper.
 3. Paper beats rock.
 
-We can use a series of if statements to determine the winner.
+---
+
+We can use a series of if / else if statements to determine the winner.
 
 ---
 
@@ -94,7 +102,11 @@ if (player1 == rock && player2 == scissors) {
 
 ---
 
-Let's convert or code into a method.
+Let's convert or code into a method. Why should we use a method?
+
+What do we need to pass into the method? What should the return type be?
+
+---
 
 ```java
 public static void determineWinner(int player1, int player2) {
@@ -112,21 +124,31 @@ public static void determineWinner(int player1, int player2) {
 }
 ```
 
+Let's leave the method as `void` for now. We can change it to return a value later. Can you think of a return type that would be useful?
+
 ---
 
-Let's create our main method to test our determineWinner method and prompt two players to enter their choices.
+We now have a method to determine the winner of a round of Rock, Paper, Scissors.
 
-````java
+Let's think about how we can design a complete program to utilize this method for your game and think about the `main()` method.
+
+---
+
+When you are designing a program, your `main()` method should have a higher level view. It should call other methods to perform specific tasks.
+
+The `main()` method should be easy to read and understand. It should be clear what the program is doing.
+
+---
+
+Let's create our `main()` method to test our `determineWinner` method and prompt two players to enter their choices.
 
 ```bash
 Player 1, enter your choice (0 = rock, 1 = paper, 2 = scissors): 0
 Player 2, enter your choice (0 = rock, 1 = paper, 2 = scissors): 1
 Player 2 wins!
-````
+```
 
 ---
-
-Finally, let's put the full program together.
 
 ```java
 import java.util.Scanner;
@@ -134,16 +156,14 @@ import java.util.Scanner;
 public class RockPaperScissors {
 
     public static void main(String[] args) {
-        int rounds = 5;
 
-        for (int i = 0; i < rounds; i++) {
-            Scanner input = new Scanner(System.in);
-            System.out.print("Player 1, enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
-            int player1 = input.nextInt();
-            System.out.print("Player 2, enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
-            int player2 = input.nextInt();
-            determineWinner(player1, player2);
-        }
+        Scanner input = new Scanner(System.in);
+        System.out.print("Player 1, enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
+        int player1 = input.nextInt();
+        System.out.print("Player 2, enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
+        int player2 = input.nextInt();
+        determineWinner(player1, player2);
+
     }
 
     public static void determineWinner(int player1, int player2) {
@@ -167,9 +187,73 @@ public class RockPaperScissors {
 
 ---
 
-What if we wanted to count how many rounds each player has won?
+Can we improve our code?
 
-How can we save the number of wins for each player and then print them after the rounds are over.
+How about creating a method for the player to enter their choice?
+
+---
+
+```java
+public static int getPlayerChoice() {
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
+    return input.nextInt();
+}
+```
+
+---
+
+Now we can use this method in our `main()` method.
+
+```java
+
+import java.util.Scanner;
+
+public class RockPaperScissors {
+
+    public static void main(String[] args) {
+
+        int player1 = getPlayerChoice("Player 1: ");
+        int player2 = getPlayerChoice("Player 2: ");
+        determineWinner(player1, player2);
+
+    }
+
+    public static void determineWinner(int player1, int player2) {
+        int rock = 0;
+        int paper = 1;
+        int scissors = 2;
+        if (player1 == rock && player2 == scissors) {
+            System.out.println("Player 1 wins!");
+        } else if (player1 == scissors && player2 == paper) {
+            System.out.println("Player 1 wins!");
+        } else if (player1 == paper && player2 == rock) {
+            System.out.println("Player 1 wins!");
+        } else if (player1 == player2) {
+            System.out.println("It's a tie!");
+        } else {
+            System.out.println("Player 2 wins!");
+        }
+    }
+
+    public static int getPlayerChoice(String player) {
+        Scanner input = new Scanner(System.in);
+        System.out.print(player + "Enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
+        return input.nextInt();
+    }
+}
+
+```
+
+---
+
+Do you see how much easier it is to read the `main()` method now?
+
+We can call the `getPlayerChoice()` method for each player and then call the `determineWinner()` method. All the functionality and logic is contained in the methods.
+
+---
+
+What if we wanted to have five rounds and count how many rounds each player has won?
 
 ---
 
@@ -177,29 +261,27 @@ How can we save the number of wins for each player and then print them after the
 
 import java.util.Scanner;
 
-public class InClass {
+public class RockPaperScissors {
 
-    public static void main(String[] args) {
-        int rounds = 5;
+public static void main(String[] args) {
+
         int player1Wins = 0;
         int player2Wins = 0;
 
-        for (int i = 0; i < rounds; i++) {
-            Scanner input = new Scanner(System.in);
-            System.out.print("Player 1, enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
-            int player1 = input.nextInt();
-            System.out.print("Player 2, enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
-            int player2 = input.nextInt();
-            int winner = determineWinner(player1, player2);
-            if (winner == 1) {
+        for (int i = 0; i < 5; i++) {
+            int player1 = getPlayerChoice("Player 1: ");
+            int player2 = getPlayerChoice("Player 2: ");
+            int result = determineWinner(player1, player2);
+            if(result == 1){
                 player1Wins++;
-            } else if (winner == 2) {
+            }else if(result == 2){
                 player2Wins++;
             }
         }
 
-        System.out.println("Player 1 won " + player1Wins + " rounds.");
-        System.out.println("Player 2 won " + player2Wins + " rounds.");
+        System.out.println("Player 1 wins: " + player1Wins);
+        System.out.println("Player 2 wins: " + player2Wins);
+
     }
 
     public static int determineWinner(int player1, int player2) {
@@ -224,6 +306,11 @@ public class InClass {
         }
     }
 
+    public static int getPlayerChoice(String player) {
+        Scanner input = new Scanner(System.in);
+        System.out.print(player + "Enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
+        return input.nextInt();
+    }
 }
 ```
 
