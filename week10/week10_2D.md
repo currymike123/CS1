@@ -89,15 +89,25 @@ This is also referred to as a matrix. We can create a matrix by creating an arra
 
 ---
 
-Let's create an array of arrays or a 2D array:
+Let's create an array of arrays or a <b>2D array</b>:
+
+```
+type[][] name = new type[rows][columns];
+```
+
+---
+
+Let's create a 2D array with 3 rows and 3 columns:
 
 ```java
 int[][] numbers = new int[3][3];
 ```
 
-This creates a 3x3 matrix or a 2D array with 3 rows and 3 columns.
+We've added dimensionality to our data structure.
 
-We've added dimenenionality to our data structure. We can access the elements in the 2D array using two indices.
+---
+
+We can access the elements in the 2D array using two indices.
 
 ```java
 numbers[0][0] = 3;
@@ -143,6 +153,10 @@ for (int i = 0; i < numbers.length; i++) {
     System.out.println();
 }
 ```
+
+What is the output?
+
+---
 
 Output:
 
