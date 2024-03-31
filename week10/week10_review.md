@@ -25,17 +25,23 @@ style: |
 
 # Week 10: Computer Science 1
 
-## Loops, Methods, Arrays Review and Problems
+## Program Design
 
 ---
 
-Let's work through a few examples to review loops and arrays.
+## Program Design
 
 ---
 
-One of the best ways to get comfortable with these tools is to walk through the logic of a problem or even better a game.
+Program design is the process of creating a plan for a software solution at the level of individual programs or components. It involves deciding on the algorithms, data structures, control flow, and interfaces between different components. Program design is typically concerned with solving a specific problem.
 
-You can break down the rules (or logic) of a game into a series of steps. Then you can convert those steps into code.
+Let's review the concepts that we have learned so far and use them to design a system.
+
+---
+
+One of the best ways to get comfortable with these tools is to walk through the design of a game.
+
+You can break down the rules (or logic) of a game into a series of steps, ,hen encode them, and turn them into a program (system).
 
 ---
 
