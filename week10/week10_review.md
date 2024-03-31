@@ -102,9 +102,13 @@ if (player1 == rock && player2 == scissors) {
 
 ---
 
-Let's convert or code into a method. Why should we use a method?
+Let's convert or code into a method.
 
-What do we need to pass into the method? What should the return type be?
+Why should we use a method?
+
+What do we need to pass into the method?
+
+What should the return type be?
 
 ---
 
@@ -130,7 +134,7 @@ Let's leave the method as `void` for now. We can change it to return a value lat
 
 We now have a method to determine the winner of a round of Rock, Paper, Scissors.
 
-Let's think about how we can design a complete program to utilize this method for your game and think about the `main()` method.
+Let's think about how we can design a complete program to utilize this method for your game and think about how best to use the `main()` method.
 
 ---
 
@@ -194,7 +198,7 @@ How about creating a method for the player to enter their choice?
 ---
 
 ```java
-public static int getPlayerChoice() {
+public static int getPlayerChoice(String player) {
     Scanner input = new Scanner(System.in);
     System.out.print("Enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
     return input.nextInt();
@@ -238,7 +242,7 @@ public class RockPaperScissors {
 
     public static int getPlayerChoice(String player) {
         Scanner input = new Scanner(System.in);
-        System.out.print(player + "Enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
+        System.out.print(player ", enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
         return input.nextInt();
     }
 }
@@ -254,6 +258,10 @@ We can call the `getPlayerChoice()` method for each player and then call the `de
 ---
 
 What if we wanted to have five rounds and count how many rounds each player has won?
+
+How do we ask the players to enter their choice over and over?
+
+How do we keep track of the score?
 
 ---
 
@@ -308,11 +316,17 @@ public static void main(String[] args) {
 
     public static int getPlayerChoice(String player) {
         Scanner input = new Scanner(System.in);
-        System.out.print(player + "Enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
+        System.out.print(player + ", enter your choice (0 = rock, 1 = paper, 2 = scissors): ");
         return input.nextInt();
     }
 }
 ```
+
+---
+
+Lastly, can we use an array somewhere in our program?
+
+Is it worth it?
 
 ---
 
