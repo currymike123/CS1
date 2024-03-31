@@ -334,6 +334,8 @@ Let's create a new game, Hangman.
 
 What are the rules of hangman?
 
+---
+
 1. A word is chosen at random.
 2. The player guesses a letter.
 3. If the letter is in the word, the letter is revealed.
@@ -344,6 +346,8 @@ What are the rules of hangman?
 
 How do we get a random number?
 
+---
+
 Remember the Math.random() method?
 
 ```java
@@ -351,6 +355,8 @@ int random = (int) (Math.random() * 5);
 ```
 
 This code generates a random number between 0 and 4.
+
+---
 
 Let's use this to choose a random word from an array of words.
 
@@ -364,6 +370,14 @@ String word = words[(int) (Math.random() * words.length)];
 
 Now let's break down the other parts of the code we need.
 
+What is the best structure to store the guessed word?
+
+How do we get the player's guess?
+
+How do we check if the guessed word is correct?
+
+---
+
 1. We need to create a char array to store the guessed word.
 2. We need to get the player's guess.
 3. We need to create a loop to check if the guessed word is correct.
@@ -371,6 +385,8 @@ Now let's break down the other parts of the code we need.
 5. If the guessed word is incorrect, we need to decrement the number of lives.
 
 Work out the logic in comments first.
+
+---
 
 Then create a method to play the game. You should start with two methods, your main method and a method to play the game.
 
