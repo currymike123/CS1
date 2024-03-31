@@ -266,9 +266,7 @@ public static int[] getMove() {
 
 ---
 
-Let's continous ask the user to enter the row and column to place their '1' or '2' until the game is over. We can use the following method to check if the game is over, we can visually check to see if the game is over.
-
-Can you think of a way to check if the game is over? Try to come up with a plan at lab.
+Let's continous ask the user to enter the row and column to place their '1' or '2' until the game is over. At first, we can visually check to see if the game is over. We are going to create an infinite loop, just for now.
 
 ---
 
@@ -313,5 +311,53 @@ public class TicTacToe {
     }
 }
 ```
+
+---
+
+Can you think of a way to check if the game is over?
+
+What do we need to check?
+
+---
+
+We need to check if either player has three in a row, three in a column, or three in a diagonal.
+
+How can we use our 2D array to check this?
+
+---
+
+```java
+
+public static boolean isGameOver(int[][] board) {
+    //Check rows
+    for (int i = 0; i < board.length; i++) {
+        if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != 0) {
+            return true;
+        }
+    }
+
+    //Check columns
+    for (int i = 0; i < board.length; i++) {
+        if (board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != 0) {
+            return true;
+        }
+    }
+
+    //Check diagonals
+    if (board[0][0] == board[1][1] && board[1][1] == board[2][2] && board[0][0] != 0) {
+        return true;
+    }
+
+    if (board[0][2] == board[1][1] && board[1][1] == board[2][0] && board[0][2] != 0) {
+        return true;
+    }
+
+    return false;
+}
+```
+
+---
+
+Can you add this to the program? Use the lab to implement the method and check if the game is over. Remember to remove the infinite loop!
 
 ---
