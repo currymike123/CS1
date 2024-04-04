@@ -1,4 +1,4 @@
-# Lab 8
+# Lab 9
 
 1.  Write a program that prompts the user to enter the bill total and the gratuity rate, and then calculates the gratuity and total. The program should then display the gratuity and total. For example:
 

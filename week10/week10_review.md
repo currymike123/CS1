@@ -41,7 +41,7 @@ Let's review the concepts that we have learned so far and use them to design a s
 
 One of the best ways to get comfortable with these tools is to walk through the design of a game.
 
-You can break down the rules (or logic) of a game into a series of steps, ,hen encode them, and turn them into a program (system).
+You can break down the rules (or logic) of a game into a series of steps, then encode them, and turn them into a complete program.
 
 ---
 
@@ -120,6 +120,11 @@ What should the return type be?
 
 ```java
 public static void determineWinner(int player1, int player2) {
+
+    int rock = 0;
+    int paper = 1;
+    int scissors = 2;
+
     if (player1 == rock && player2 == scissors) {
         System.out.println("Player 1 wins!");
     } else if (player1 == scissors && player2 == paper) {
@@ -330,9 +335,7 @@ public static void main(String[] args) {
 
 ---
 
-Lastly, can we use an array somewhere in our program?
-
-Is it worth it?
+Lastly, can we use an array somewhere in our program? Can you think of a way we can simplify our code? Or move the logic of counting the wins to a separate method? Use the lab to practice these concepts.
 
 ---
 
@@ -389,61 +392,71 @@ How do we check if the guessed word is correct?
 3. We need to create a loop to check if the guessed word is correct.
 4. If the guessed word is correct, we need to reveal the letter.
 5. If the guessed word is incorrect, we need to decrement the number of lives.
+6. As a placeholder for the guessed word, we can use an array of stars.
+
+For instance, if the word is "apple", the guessed word would be "**\***".
 
 Work out the logic in comments first.
 
 ---
 
-Then create a method to play the game. You should start with two methods, your main method and a method to play the game.
+Now create a method to play the game. You need to use at least two methods, your main method and a method to play the game. You will pass the words array to the playGame method. This way any time you want to play a new game you just have to change the words array. You can add additional methods as needed.
 
-I'll get you started and then you can finish the code.
+I'll get you started with the main method and comments. Then you can finish the code.
 
 ---
 
 ```java
-
 import java.util.Scanner;
 
 public class Hangman {
 
     public static void main(String[] args) {
+        //Array of words
         String[] words = {"apple", "banana", "cherry", "date", "elderberry"};
+        //Call the playGame method
         playGame(words);
     }
 
     public static void playGame(String[] words) {
-        String word = words[(int) (Math.random() * words.length)];
-        char[] guessedWord = new char[word.length()];
-        for (int i = 0; i < guessedWord.length; i++) {
-            guessedWord[i] = '*';
-        }
+        //Choose a random word
 
-        Scanner scanner = new Scanner(System.in);
-        int guesses = 0;
-        while (hasStars(guessedWord) && guesses < 6) {
-            System.out.println(guessedWord);
-            System.out.println("Guess a letter:");
-            char guess = scanner.next().charAt(0);
-            boolean correctGuess = false;
-            for (int i = 0; i < word.length(); i++) {
-                if (word.charAt(i) == guess) {
-                    guessedWord[i] = guess;
-                    correctGuess = true;
-                }
-            }
-            if (!correctGuess) {
-                guesses++;
-            }
-        }
+        //Create a char array to store the guessed word
 
-        if (hasStars(guessedWord)) {
-            System.out.println("Sorry, you didn't guess the word in 6 attempts.");
-        } else {
-            System.out.println(guessedWord);
-            System.out.println("Congratulations, you guessed the word!");
-        }
+        //Fill the guessed word with stars
+
+        //Start a scanner for the users input
+
+        //Create a variable to store the number of guesses
+
+
+        //Create a loop to play the game
+
+            //Print the guessed word (initially all stars)
+
+
+            //Prompt the user to guess a letter
+
+            //Get the users guess
+
+            //Create a boolean to check if the guess is correct
+
+            //Loop through the word to check if the guess is correct
+
+                //If the guess is correct, reveal the letter
+
+                //Set correctGuess to true
+
+            //If the guess is incorrect, increment the number of guesses
+
+        //Check if the user has guessed the word or run out of guesses
+
+                //If the user has guessed the word, print a message
+
+                //If the user has run out of guesses, print a message
     }
 
+    //Create a method to check if the guessed word has any stars left
     public static boolean hasStars(char[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == '*') {
@@ -453,5 +466,7 @@ public class Hangman {
         return false;
     }
 }
----
+
 ```
+
+---
