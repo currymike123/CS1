@@ -43,31 +43,13 @@ Along with the **Standard Library**, there are many other libraries that can be 
 
 ---
 
-To extend the functionality of Java, we can use **Software Libraries** that contain pre-written code we can use in our programs.
-
 One such Java Library is called **Processing**. Processing is a flexible software sketchbook and a language for learning how to code within the context of the visual arts.
 
-Processing is a Java library that simplifies the process of creating visual programs. It is used by artists, designers, and students to create visual programs.
+Processing is a Java library that simplifies the process of creating visual programs. It is used by developers, artists, designers, and students to create visual programs.
 
 Here is a link to the Processing website: [Processing](https://processing.org/)
 
----
-
-Processing is written in Java, so we can use the same Java syntax we have been learning. All the concepts we have learned in this class can be applied to Processing.
-
-Here is an example of a simple Processing program that draws a circle on the screen:
-
-```java
-void setup() {
-  size(500, 500);
-}
-
-void draw() {
-  rect(200, 200, 100);
-}
-```
-
-This program creates a window that is 500 pixels by 500 pixels and draws a circle at the coordinates (200, 200) with a diameter of 100 pixels. It's a simple program, close to the Hello World of programming visuals.
+You can download the Processing IDE (Integrated Development Environment) from the Processing website. You won't be able to run the Processing code the same way you run Java code in VS Code.
 
 ---
 
@@ -97,9 +79,55 @@ void drawCircle(int x, int y, int diameter) {
 }
 ```
 
+---
+
+Here is an example of a simple Processing program that draws a circle on the screen:
+
+```java
+void setup() {
+  size(500, 500);
+}
+
+void draw() {
+  rect(200, 200, 100, 100);
+}
+```
+
+This program creates a window that is 500 pixels by 500 pixels and draws a circle at the coordinates (200, 200) with a diameter of 100 pixels. It's a simple program, close to the Hello World of programming visuals.
+
+setup() is a special function in Processing that is called once when the program starts. draw() is another special function that is called repeatedly to update the screen, it's a loop that runs continuously.
+
+---
+
+Now we can combine what we know in Java with Processing. Let's add a variable to the previous program to make the rect move across the screen.
+
+```java
+
+int x = 0;
+
+void setup() {
+  size(500, 500);
+}
+
+void draw() {
+  background(255);
+  rect(x, 200, 100, 100);
+  x += 1;
+}
+
+```
+
+---
+
+The concepts we are learning in this class can be applied to other programming languages and libraries. The syntax may be different, but the underlying concepts are the same.
+
+We can use loops, conditionals, and arrays to manipulate data in Processing just like we do in Java. All other programming languages have similar concepts.
+
+---
+
 If you want to explore Processing further, you can download it from the Processing website and start creating visual programs.
 
-Let's start using Processing for array manipulation.
+We'll use Processing today to continue our study of 2D arrays and nested loops.
 
 ---
 
@@ -127,7 +155,7 @@ void setup() {
   size(400, 400);
   cols = width / pixelSize;
   rows = height / pixelSize;
-  canvas = new int[rows][cols]; // Switched rows and cols here
+  canvas = new int[rows][cols];
   initializeCanvas();
 }
 
@@ -140,7 +168,7 @@ void mouseDragged() {
   int col = mouseX / pixelSize;
   int row = mouseY / pixelSize;
   if (col >= 0 && col < cols && row >= 0 && row < rows) {
-    canvas[row][col] = 0; // Switched row and col here
+    canvas[row][col] = 0;
   }
 }
 
@@ -157,7 +185,7 @@ void displayCanvas() {
     for (int j = 0; j < cols; j++) { // Then iterate over cols
       fill(canvas[i][j]);
       noStroke();
-      rect(j * pixelSize, i * pixelSize, pixelSize, pixelSize); // Switched i and j here
+      rect(j * pixelSize, i * pixelSize, pixelSize, pixelSize);
     }
   }
 }
