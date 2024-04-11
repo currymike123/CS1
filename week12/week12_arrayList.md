@@ -23,7 +23,7 @@ style: |
       }
 ---
 
-# Week 10: Computer Science 1
+# Week 12: Computer Science 1
 
 ## ArrayLists
 
