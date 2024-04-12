@@ -9,8 +9,7 @@ public class InClass {
             printBoard(board);
             int[] move = getMove();
             setElement(board,move[0],move[1],move[2]);
-        }
-        
+        }   
     }
 
     public static int[] getMove(){
@@ -36,4 +35,5 @@ public class InClass {
         }
 
     }
+
 }

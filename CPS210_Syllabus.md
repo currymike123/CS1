@@ -39,9 +39,28 @@ Algorithms, computer organization, data representation, program structure, progr
 - Understand concepts of encapsulation, information hiding, inheritance.
 - Use of File I/O and Error handling.
 
+<div style="page-break-after: always;"></div>
+
+### SLO (Student Learning Objectives)
+
+<b>Critical Thinking and Reasoning (CTR) LEVEL 1</b><br>
+Students will
+
+- clearly articulate an issue or problem;
+- identify, analyze, and evaluate ideas, data, and arguments as they occur in their own or others’ work;
+- acknowledge limitations such as perspective and bias; and
+- develop well-reasoned (logical) arguments to form judgments and/or draw conclusions.
+
+<b>Information Literacy (IL) LEVEL 1</b><br>
+Students will
+
+- locate information effectively using tools appropriate to their need and discipline;
+- evaluate information with an awareness of authority, validity, and bias; and
+- demonstrate an understanding of the ethical dimensions of information use, creation, and dissemination.
+
 ### Textbook:
 
-The textbook below is not required, but it is what I will be referencing throughout thecourse. The lectures and labs should be enough to learn the material.
+The textbook below is not required, but it is what I will be referencing throughout the course. The lectures and labs should be enough to learn the material.
 
 Introduction to JAVA Programming, Comprehensive Version, 10th edition by Y.
 Daniel Liang (On Brightspace)
@@ -69,24 +88,20 @@ quizzes will be taken via paper due to a plethora of cheating due to ChatGPT.
   - Section 1 & 2: Monday May 16th 8:00 - 10:00 AM
   - Section 3 & 4: Tuesday May 14th 10:15 - 12:15 PM
 
-There will be no extra credit work given for any reason.
-There will be no raising of letter grades at the end of the semester for any reason
-
-Grade Scale (by percentage)
 | Grade | Percentage Range |
-|-------|-----------------|
-| A | 100 – 93 |
-| A- | 92.9 – 90 |
-| B+ | 89.9 – 87.5 |
-| B | 87.4 – 82.6 |
-| B- | 82.5 – 80 |
-| C+ | 79.9 – 77.5 |
-| C | 77.4 – 72.6 |
-| C- | 72.5 – 70 |
-| D+ | 69.9 – 67.5 |
-| D | 67.4 – 62.6 |
-| D- | 62.5 – 60 |
-| F | Below 60 |
+| ----- | ---------------- |
+| A     | 100 – 93         |
+| A-    | 92.9 – 90        |
+| B+    | 89.9 – 87.5      |
+| B     | 87.4 – 82.6      |
+| B-    | 82.5 – 80        |
+| C+    | 79.9 – 77.5      |
+| C     | 77.4 – 72.6      |
+| C-    | 72.5 – 70        |
+| D+    | 69.9 – 67.5      |
+| D     | 67.4 – 62.6      |
+| D-    | 62.5 – 60        |
+| F     | Below 60         |
 
 ### Labs:
 
@@ -104,7 +119,7 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 | 6    | Iteration & Error handling                |
 | 7    | <b>Test 2</b> & Methods                   |
 | 8    | Methods Continued & Arrays                |
-| 9    | Nesting                                   |
+| 9    | Nesting & 2D Arrays                       |
 | 10   | Math Package & Classes                    |
 | 11   | ArrayList & <b>Test 3</b>                 |
 | 12   | Strings                                   |
@@ -116,23 +131,6 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 
 Supplemental Instruction is a peer-led study group facilitated by a student that has taken and done well in the class previously and received additional training in study skills and group facilitation. Your SI Leader, Shane Lapp, facilitates two sessions per week based oﬀ of the material presented in class. Students that attend can ask questions, work through problems, review class material and work with other students in the class. Sessions are open to all students. Session times and locations can be
 found by going to my.newpaltz.edu and then to the Center for Student Success tab. Signing up early is encouraged but walk-ins are also welcome.
-
-### SLO (Student Learning Objectives)
-
-Critical Thinking and Reasoning SLO’s<br>
-Students will
-
-- clearly articulate an issue or problem;
-- identify, analyze, and evaluate ideas, data, and arguments as they occur in their own or others’ work;
-- acknowledge limitations such as perspective and bias; and
-- develop well-reasoned (logical) arguments to form judgments and/or draw conclusions.
-
-Information Literacy SLO’s<br>
-Students will
-
-- locate information effectively using tools appropriate to their need and discipline;
-- evaluate information with an awareness of authority, validity, and bias; and
-- demonstrate an understanding of the ethical dimensions of information use, creation, and dissemination.
 
 ### CAMPUS-WIDE POLICY STATEMENTS:
 
