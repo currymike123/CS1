@@ -3,45 +3,31 @@ import java.util.Random;
 public class week11 {
 
     public static void main(String[] args) {
-        int[][] numbers = new int[5][5];
+        int x = 6;
+        int y = 2;
+        int z = 5;
 
+        double[] position = {x, y, z};
 
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = 0; j < numbers[i].length; j++) {
-                numbers[i][j] = (int)(Math.random() * 10);
-            }
+        System.out.println(manipulate(position));
+
+        for(int i = 0; i < position.length; i++) {
+            System.out.println(position[i]);
         }
-
-        int[] max = findMax(numbers);
-
-        printArray(numbers);
-        System.out.println("Max value: " + max[0]);
-        System.out.println("Row: " + max[1]);
-        System.out.println("Column: " + max[2]);
     }
 
-    public static int[] findMax(int[][] arr) {
-        int[] max = {arr[0][0], 0, 0};
-
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                if (arr[i][j] > max[0]) {
-                    max[0] = arr[i][j];
-                    max[1] = i;
-                    max[2] = j;
-                }
-            }
-        }
-
-        return max;
+    public static int manipulate(int[] position) {
+        position[0] = 5;
+        position[1] = 10;
+        position[2] = 15;
+        return position[0] + position[1] + position[2];
     }
 
-    public static void printArray(int[][] arr){
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j]);
-            }
-            System.out.println();
+    public static double manipulate(double[] position) {
+        position[0] = 10.0;
+        position[1] = 20.0;
+        position[2] = 30.0;
+        return position[0] + position[1] + position[2];
     }
-}
+
 }
