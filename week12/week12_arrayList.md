@@ -35,7 +35,7 @@ style: |
 
 We have been using arrays to store data in our programs. Arrays are a fixed size, which means that once you create an array, you cannot change its size.
 
-In your lab you created an array and then had to add one more item to it. You had to create a new array and copy all the items from the old array to the new array. This is clumbersome and error prone.
+In your lab you created an array and then had to add one more item to it. You had to create a new array and copy all the items from the old array to the new array. It's cumbersome to manage arrays in this way. Lucky for us, Java has a solution for us.
 
 Java has a class called `ArrayList` that is part of the `java.util` package. An `ArrayList` is a dynamic array that can grow or shrink in size.
 
@@ -94,16 +94,28 @@ ArrayList<Type> name = new ArrayList<Type>();
 ```
 
 - `ArrayList` is the class name.
-- `<Type>` is the type of the elements in the `ArrayList`. Notice the capital `T`, this indicates the type is a class. We will discuss in the next slide.
+- `<Type>` is the type of the elements in the `ArrayList`. Notice the capital `T`, this indicates the type is a class. We will discuss this further in the next slide.
 - `name` is the name of the `ArrayList`.
 - `new ArrayList<Type>()` is the constructor that creates a new `ArrayList`.
   <br>
 
-You can see from the syntax that an `ArrayList` is a class. You can create an `ArrayList` object just like you would create any other object.
+You can see from the syntax that an `ArrayList` is a class. You can create an `ArrayList` object just like you would create any other object we have used in this class.
 
 ---
 
-Let's discuss the different types of `ArrayList`:
+An `ArrayList` is a generic class. A generic class is a class that can work with any data type. You can specify the data type when you create an `ArrayList`.
+
+```java
+ArrayList<Integer> numbers = new ArrayList<Integer>();
+```
+
+In this example, we created an `ArrayList` of `Integer` objects. You can only add `Integer` objects to this `ArrayList`.
+
+You might be thinking why is the `<Integer>` declaration uppercase?
+
+---
+
+An `ArrayList` can only store objects. Remember, objects are instances of classes. You cannot store primitive types in an `ArrayList`. You must use the wrapper classes.
 
 ```java
 <Integer> // Integer objects
@@ -114,8 +126,6 @@ Let's discuss the different types of `ArrayList`:
 ```
 
 These different types are actually classes. You can tell be the capital letter. To be more specific they are <b>wrappers classes</b> for the primitive types.
-
-An `ArrayList` can only store objects. You cannot store primitive types in an `ArrayList`. You must use the wrapper classes.
 
 ---
 
@@ -152,7 +162,7 @@ String word = "hello";
 int length = word.length();
 ```
 
-The `length()` method is a method of the `String` class. The `length()` method is not a method of the `char` primitive type.
+The `length()` method is a method of the `String` class. The `length()` method is not a method of the `char` primitive type. Classes combine data storage with functionality. Where primitive types are just data storage.
 
 ---
 
