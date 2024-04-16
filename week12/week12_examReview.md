@@ -102,7 +102,7 @@ The parameters are the values we pass to the method. When we call a method the p
 
 public class Main {
     public static void main(String[] args) {
-        int sum = add(5;
+        int sum = add(5);
         System.out.println(sum);
     }
 

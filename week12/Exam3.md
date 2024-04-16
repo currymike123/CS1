@@ -5,7 +5,7 @@ Name:
 ---
 
 <b>
-1) (10 pts) Will the following code execute without an error? What are the errors?</b>
+1) Will the following code execute without an error? What are the errors?</b>
 
 ```java
 int[] array = {1,2,3,4,5};
@@ -22,7 +22,34 @@ for(int i = 0; i <= 5; i++) {
 
 </ol>
 
-<b>Explain:</b><br><br><br><br
+<b>Explain:</b><br><br><br><br>
+
+<b>2) Create a double array size 10 and fill it with values. Then create a method that finds the minimum value in the array and returns it. </b>
+
+```java
+
+public class Exam3 {
+    public static void main(String[] args) {
+
+
+
+
+
+
+
+    }
+
+   __________________________________________(                          ){
+
+
+
+
+
+
+
+   }
+}
+```
 
 <div style="page-break-after: always;"></div>
 
@@ -58,68 +85,44 @@ public class Exam3 {
 }
 ```
 
-<b>Output:</b>
+<b>A) Output:</b>
 <br><br><br><br>
 
-<b>Explain why:
+<b>B) Explain why:
+<br><br><br><br>
+
+<b>C) Create a method that will print the contents of the `position` array in the `main` method.</b>
+<br><br><br><br>
 
 <div style="page-break-after: always;"></div>
 
-<b>3) (20 pts) Write a program that asks the user to enter an integer, double, and a word (one word, a space should stop the input). The program should then print out the integer, double, and word in the following format: </b>
+4. Answer the following questions about the following code:
 
-```
-The integer is: 5
-The double is: 3.14
-The word is: Hello
+```java
+int[][] array = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
 ```
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+|     |     |     |     |
+| --- | --- | --- | --- |
+| 1   | 2   | 3   | 4   |
+| 5   | 6   | 7   | 8   |
+| 9   | 10  | 11  | 12  |
+|     |     |     |     |
 
-<b>4) (20 pts) Write a program that asks a user for an integer that is divisible by 5. If the user enters a number that is not divisible by 5, you should keep asking the user for a valid number until they enter one. Once
-they enter the valid number, print out the number they entered. Below is a sample run: </b>
+<b>A) What is the array index of `7`?</b>
+<br><br><br><br><br>
+<b>B) Write the statements that will print all the values in the array along with their index. </b>
+
+Expected output:
 
 ```bash
-Enter a number that is divisible by 5: 3
-Enter a number that is divisible by 5: 7
-Enter a number that is divisible by 5: 10
-10
+1: 0 0
+2: 0 1
+3: 0 2
+and so on...
 ```
+
+<br><br><br><br><br><br><br><br><br><br>
+<b>C) Write a method that will return the sum of all the values in the array.</b>
 
 <div style="page-break-after: always;"></div>
-
-<b>5) (20 pts) Write a program that asks a user for a floating point number. Each time the user enters a number, the program should add the number to a running total. The program should keep asking the user for a number until the user enters a negative number or the total reaches 100. Once the user enters a negative number or the total reaches 100, the program should print out the running total. Below is a sample run: </b>
-
-```bash
-//Negative number
-Enter a number: 5.4
-Enter a number: 10.2
-Enter a number: 15.3
-Enter a number: -5.4
-The total is: 30.9
-
-//Total reaches 100
-Enter a number: 5.4
-Enter a number: 10.2
-Enter a number: 16.1
-Enter a number: 68.3
-The total is: 100.0
-```
-
-<div style="page-break-after: always;"></div>
-
-<b>6) (20 pts) Write a program that asks a user for a positive integer. The program should then print out the number of digits in the number. Below is a sample run: </b>
-
-```bash
-Enter a number: 123
-The number of digits is: 3
-
-Enter a number: 123456
-The number of digits is: 6
-```
-
-<b>Hint:
-<br> 1) 100/10 = 10
-<br> 2) 10/10 = 1
-<br> 3) 1/10 = 0(integer division)
-<br> 100 has 3 digits
-</b>
