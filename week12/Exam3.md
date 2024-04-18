@@ -5,7 +5,7 @@ Name:
 ---
 
 <b>
-1) Will the following code execute without an error? What are the errors?</b>
+1)(10 pts) Will the following code execute without an error? What are the errors?</b>
 
 ```java
 int[] array = {1,2,3,4,5};
@@ -15,21 +15,33 @@ for(int i = 0; i <= 5; i++) {
 }
 ```
 
-<ol type='a'>
+A) True<br>
+B) False<br>
 
-<li> True </li>
-<li> False </li>
+<b>Explain:</b><br><br><br><br><br><br><br><br>
 
-</ol>
+<b> 2)(10 pts) When passing parameters to a method, which of the following are true?
+</b>
 
-<b>Explain:</b><br><br><br><br>
+A) Integers are passed by reference. <br>
+B) Doubles are passed by copy. <br>
+C) Integer arrays are passed by reference.<br>
+D) Double arrays are passed by copy.
 
-<b>2) Create a double array size 10 and fill it with values. Then create a method that finds the minimum value in the array and returns it. </b>
+<div style="page-break-after: always;"></div>
+
+<b>3) (20 pts) In the `main` method create a double array size 10 and fill it with values. Pass the array as a parameter to a method that finds the minimum value in the array and returns it. </b>
 
 ```java
 
 public class Exam3 {
     public static void main(String[] args) {
+
+
+
+
+
+
 
 
 
@@ -47,13 +59,24 @@ public class Exam3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
    }
 }
 ```
 
 <div style="page-break-after: always;"></div>
 
-<b>3) What is the output of the following program? </b>
+<b>4) What is the output of the following program? </b>
 
 ```java
 public class Exam3 {
@@ -85,18 +108,18 @@ public class Exam3 {
 }
 ```
 
-<b>A) Output:</b>
+<b>A) Output (10 pts):</b>
 <br><br><br><br>
 
-<b>B) Explain why:
+<b>B) Explain why (10 pts):
 <br><br><br><br>
 
-<b>C) Create a method that will print the contents of the `position` array in the `main` method.</b>
-<br><br><br><br>
+<b>C) Create a method that will print the contents of the `position` array when it is passed as a parameter. (10 pts)</b>
+<br><br><br><br><br><br>
 
 <div style="page-break-after: always;"></div>
 
-4. Answer the following questions about the following code:
+<b>5) Answer the following questions about the following code:</b>
 
 ```java
 int[][] array = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
@@ -109,9 +132,9 @@ int[][] array = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
 | 9   | 10  | 11  | 12  |
 |     |     |     |     |
 
-<b>A) What is the array index of `7`?</b>
+<b>A) What is the array index of `7`? (10 pts)</b>
 <br><br><br><br><br>
-<b>B) Write the statements that will print all the values in the array along with their index. </b>
+<b>B) Write the statements that will print all the values in the array along with their index. (10 pts) </b>
 
 Expected output:
 
@@ -123,6 +146,4 @@ and so on...
 ```
 
 <br><br><br><br><br><br><br><br><br><br>
-<b>C) Write a method that will return the sum of all the values in the array.</b>
-
-<div style="page-break-after: always;"></div>
+<b>C) Write a method that will return the sum of all the values in the array. (10 pts)</b>

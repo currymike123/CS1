@@ -373,7 +373,7 @@ for (int i = 0; i < numbers.length; i++) {
 }
 ```
 
-When you called `numbers.length` you are getting the number of rows in the 2D array. When you call `numbers[i].length` you are getting the number of columns in the row. All the rows have the same number of columns so you can use any row to get the number of columns.
+When you called `numbers.length` you are getting the number of rows in the 2D array. When you call `numbers[i].length` you are getting the number of columns in the row.
 
 ---
 
