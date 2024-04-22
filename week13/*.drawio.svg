@@ -1,0 +1,15 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="201px" height="201px" viewBox="-0.5 -0.5 201 201" content="&lt;mxfile&gt;&lt;diagram id=&quot;y5pvv_MCcDCfBuutSQVS&quot; name=&quot;Page-1&quot;&gt;zZQ7b4MwEIB/DTuPhoa1JGmXTgydLXzFVg1G5lKgv76mPvNQEilDK3VBvu/O9vkzECR5PTwb1opXzUEFcciHIDkEcZxmj/Y5gdGBXZo6UBnJHYoWUMgvIBgSPUsO3aYQtVYo2y0sddNAiRvGjNH9tuxdq+2uLavgAhQlU5f0TXIUju534cJfQFbC7xyFlKmZLybQCcZ1v0LJMUhyozW6UT3koCZ33oubd7qRnRsz0OBdEzI345OpMx2uQFZ+UHc4+iN3vawVa2z0ZPS54TAtENqoQ2aQrihOLKAFwSAMN7uK5rPadwR0DWhGW0IT4pT0jL5LivvFduydipXpGTK64Wpee5FgB+ThuhN/NysnFzq2DnohEYqWlVO2t6+8ZQJru8EhuttIdl2JV/Bwp4L0NwxE/9DA/u8E2HD55H5yq/9WcvwG&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 0 23 L 0 0 L 200 0 L 200 23" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 0 23 L 0 200 L 200 200 L 200 23" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 0 23 L 200 23" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="99.5" y="16">
+                Stack
+            </text>
+        </g>
+        <rect x="0" y="140" width="200" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
+        <rect x="0" y="80" width="200" height="60" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" pointer-events="none"/>
+    </g>
+</svg>

@@ -231,6 +231,10 @@ You then use the `get()` method to access the elements of the `ArrayList`.
 
 ---
 
+## Examples
+
+---
+
 Let's manipulate an `ArrayList`:
 
 ```java
@@ -251,6 +255,252 @@ public class Main {
         for (int i = 0; i < numbers.size(); i++) {
             System.out.println(numbers.get(i));
         }
+    }
+}
+```
+
+---
+
+Let's fill an `ArrayList` with random numbers:
+
+```java
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        for (int i = 0; i < 10; i++) {
+            numbers.add((int)(Math.random() * 10));
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            System.out.println(numbers.get(i));
+        }
+    }
+}
+```
+
+Why was I able to add a primitive type to the `ArrayList`?
+
+---
+
+When you add a primitive type to an `ArrayList`, Java automatically converts the primitive type to the corresponding wrapper class.
+
+This is called <b>Autoboxing</b>. Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding wrapper classes.
+
+When you add a primitive type to an `ArrayList`, Java automatically converts the primitive type to the corresponding wrapper class.
+
+---
+
+Let's add 1 to each element in the `ArrayList`
+
+---
+
+```java
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        for (int i = 0; i < 10; i++) {
+            numbers.add((int)(Math.random() * 10));
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            numbers.set(i, numbers.get(i) + 1);
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            System.out.println(numbers.get(i));
+        }
+    }
+}
+```
+
+We use the `get()` method as a parameter to the `set()` method to get the value of the element and add 1 to it.
+
+---
+
+Let's remove any even numbers from the `ArrayList`
+
+---
+
+```java
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        for (int i = 0; i < 10; i++) {
+            numbers.add((int)(Math.random() * 10));
+            System.out.println(numbers.get(i));
+        }
+
+        System.out.println("Remove Even Numbers:");
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) % 2 == 0) {
+                numbers.remove(i);
+            }
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            System.out.println(numbers.get(i));
+        }
+    }
+}
+```
+
+Why do I see even numbers?
+
+---
+
+When you remove an element from an `ArrayList`, the size of the `ArrayList` changes. The elements shift to the left. This means that the index of the elements changes.
+
+<center>
+
+![](arrayList.drawio.svg)
+
+</center>
+
+How do I fix this?
+
+---
+
+We can iterate over the `ArrayList` in reverse order:
+
+```java
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        for (int i = 0; i < 10; i++) {
+            numbers.add((int)(Math.random() * 10));
+            System.out.println(numbers.get(i));
+        }
+
+        System.out.println("Remove Even Numbers:");
+        for (int i = numbers.size() - 1; i >= 0; i--) {
+            if (numbers.get(i) % 2 == 0) {
+                numbers.remove(i);
+            }
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            System.out.println(numbers.get(i));
+        }
+    }
+}
+```
+
+---
+
+You can also decrement the counting variable when you remove an element:
+
+```java
+
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+
+        for (int i = 0; i < 10; i++) {
+            numbers.add((int)(Math.random() * 10));
+            System.out.println(numbers.get(i));
+        }
+
+        System.out.println("Remove Even Numbers:");
+        for (int i = 0; i < numbers.size(); i++) {
+            if (numbers.get(i) % 2 == 0) {
+                numbers.remove(i);
+                i--;
+            }
+        }
+
+        for (int i = 0; i < numbers.size(); i++) {
+            System.out.println(numbers.get(i));
+        }
+    }
+}
+```
+
+---
+
+Let's create a program that allows a teacher to enter grades, calculate the average, find the maximum, and display the grades.
+
+---
+
+```java
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class GradeAnalysis {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        ArrayList<Integer> grades = inputGrades(input);
+
+        if (grades.isEmpty()) {
+            System.out.println("No grades were entered.");
+        } else {
+            printGrades(grades);
+            printAverageGrade(grades);
+            printMaximumGrade(grades);
+        }
+
+        input.close();
+    }
+
+    // Method to input grades
+    public static ArrayList<Integer> inputGrades(Scanner input) {
+        ArrayList<Integer> grades = new ArrayList<>();
+        System.out.println("Enter grades (enter -1 to finish):");
+        while (true) {
+            int grade = input.nextInt();
+            if (grade == -1) {
+                break;
+            }
+            grades.add(grade);
+        }
+        return grades;
+    }
+
+    // Method to print all grades
+    public static void printGrades(ArrayList<Integer> grades) {
+        for (int i = 0; i < grades.size(); i++) {
+            System.out.print(grades.get(i) + ", ");
+        }
+        System.out.println(); // Moves to the next line after listing all grades
+    }
+
+    //Method to calculate the average grade
+    public static void printAverageGrade(ArrayList<Integer> grades) {
+        int sum = 0;
+        for (int i = 0; i < grades.size(); i++) {
+            sum += grades.get(i);
+        }
+        double average = (double) sum / grades.size();
+        System.out.println("Average grade: " + average);
+    }
+
+    // Method to find and print the maximum grade
+    public static void printMaximumGrade(ArrayList<Integer> grades) {
+        int max = grades.get(0);
+        for (int i = 1; i < grades.size(); i++) {
+            if (grades.get(i) > max) {
+                max = grades.get(i);
+            }
+        }
+        System.out.println("Maximum grade: " + max);
     }
 }
 ```
