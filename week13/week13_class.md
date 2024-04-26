@@ -54,7 +54,7 @@ Let's play with a toy example of a class. We will create a class called `Person`
 ---
 
 ```java
-public class Person {
+class Person {
 
     String name;
     int age;
@@ -91,8 +91,6 @@ public class Main {
 The concept of classes is essential to object-oriented programming. It's called Object-Oriented Programming for a reason. We create objects of classes and interact with them.
 
 This should help to better understand how we can use prebuilt classes like `String` and `ArrayList`.
-
-This is as far as we will go into creating our own classes in CS1. We will cover classes in more detail in CS2.
 
 ---
 
@@ -316,7 +314,7 @@ Example:
 String str1 = "Albert Einstein";
 String str2 = "ein";
 String result = moveToEnd(str1, str2);
-System.out.println(result); // Albert steinEIN
+System.out.println(result); // Albert EinstEIN
 ```
 
 ---
@@ -330,7 +328,7 @@ public class Main {
         String str1 = "Albert Einstein";
         String str2 = "ein";
         String result = moveToEnd(str1, str2);
-        System.out.println(result); // Albert steinEIN
+        System.out.println(result); // Albert EinstEIN
 
     }
 

@@ -146,7 +146,7 @@ Java also has a built-in class called `File` that allows us to interact with fil
 
 ```java
 
-import java.io.File;
+import java.io.*;
 
 public class InClass {
 
@@ -165,7 +165,7 @@ Along with `.txt` files we an create `.csv`. Both of these formats are universal
 
 ```java
 
-import java.io.File;
+import java.io.*;
 
 public class InClass {
 
@@ -178,15 +178,34 @@ public class InClass {
 
 ---
 
-Now that we have a reference to a file, we can use the `File` class to interact and save data to the file. We can use the `PrintWriter` class to write data to a file.
+Let's write out program so we can write to a file. We need to add some code to your `main` method to write to the file. There could be an error while writing to the file, so we need to add a `throws IOException` clause to the `main` method. This will allow us to handle the error if it occurs. You will learn more about error exceptions in CS2.
 
 ```java
 
-import java.io.File;
+import java.io.*;
 
 public class InClass {
 
-    public static void main(String[] args throws IOException) {
+    public static void main(String[] args) throws IOException {
+        File file = new File("output.csv");
+
+        //Code to write to the file
+    }
+}
+
+```
+
+---
+
+Now that we have a reference to a file, we can use the `File` class to interact and save data to the file. We can use the `PrintWriter` class to write data to a file. `Printwriter` is also in the `java.io` package. We can import both with `java.io.*`, one import statement for all classes in the package.
+
+```java
+
+import java.io.*;
+
+public class InClass {
+
+    public static void main(String[] args) throws IOException {
         File file = new File("output.txt");
         PrintWriter writer = new PrintWriter(file);
         writer.println("Hello, Michael");
@@ -204,11 +223,12 @@ Let's crate a program that prompts the user for their name and writes it to a fi
 
 ```java
 
-import java.io.File;
+import java.io.*;
+import java.util.*;
 
 public class InClass {
 
-    public static void main(String[] args throws IOException) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your name: ");
         String name = scanner.nextLine();
@@ -229,11 +249,12 @@ To read data from a file, we can use the `Scanner` class. We can create a `Scann
 
 ```java
 
-import java.io.File;
+import java.io.*;
+import java.util.*;
 
 public class InClass {
 
-    public static void main(String[] args throws IOException) {
+    public static void main(String[] args) throws IOException {
         File file = new File("input.txt");
         Scanner scanner = new Scanner(file);
         String name = scanner.nextLine();
@@ -249,11 +270,12 @@ public class InClass {
 Now that we have a Scanner object, we can read data from the file. We can use the `nextLine` method to read the next line of the file. We can also use the `hasNextLine` method to check if there is another line in the file.
 
 ```java
-import java.io.File;
+import java.io.*;
+import java.util.*;
 
 public class InClass {
 
-    public static void main(String[] args throws IOException) {
+    public static void main(String[] args) throws IOException {
         File file = new File("input.txt");
         Scanner scanner = new Scanner(file);
         while(scanner.hasNextLine()) {
@@ -270,12 +292,13 @@ public class InClass {
 We can also save the data that we are reading so we can use it in our program. Now, we don't know the size of the data we are reading, so we can use an `ArrayList` to store the data.
 
 ```java
-import java.io.File;
+import java.io.*;
+import java.util.*;
 
 public class InClass {
 
-    public static void main(String[] args throws IOException) {
-        File file = new File("input.txt");
+    public static void main(String[] args) throws IOException {
+        File file = new File("names.txt");
         Scanner scanner = new Scanner(file);
         ArrayList<String> names = new ArrayList<>();
         while(scanner.hasNextLine()) {
@@ -306,11 +329,12 @@ We need to loop through each line in the file and split the line by the comma. W
 Let's create a program that reads data from a `.csv` file and stores it in an `ArrayList`.
 
 ```java
-import java.io.File;
+import java.io.*;
+import java.util.*;
 
 public class InClass {
 
-    public static void main(String[] args throws IOException {
+    public static void main(String[] args) throws IOException {
         File file = new File("input.csv");
         Scanner scanner = new Scanner(file);
         ArrayList<String[]> data = new ArrayList<>();
@@ -347,7 +371,7 @@ import java.io.File;
 public class InClass {
 
     public static void main(String[] args throws IOException {
-        File file = new File("input.csv");
+        File file = new File("input_num.csv");
         Scanner scanner = new Scanner(file);
         int sum = 0;
         while(scanner.hasNextLine()) {
