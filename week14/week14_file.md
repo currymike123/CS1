@@ -326,7 +326,85 @@ We need to loop through each line in the file and split the line by the comma. W
 
 ---
 
-Let's create a program that reads data from a `.csv` file and stores it in an `ArrayList`.
+The `.csv` file we will be reading from is shown below. Each line represents a row in the table and each value is separated by a comma. The first value is the name and the second value is the age.
+
+```csv
+Michael, 40.5
+John, 30.3
+Jane, 20.1
+```
+
+---
+
+We can split each line by the comma and store the values in two `ArrayLists`. One for the names and one for the ages.
+
+```java
+ArrayList<String> names = new ArrayList<>();
+ArrayList<Double> ages = new ArrayList<>();
+
+while(scanner.hasNextLine()) {
+    String line = scanner.nextLine();
+    String[] values = line.split(",");
+    names.add(values[0]);
+    double age = Double.parseDouble(values[1]);
+    ages.add(Double.parseDouble(age);
+}
+```
+
+Notice that we can call `Double.parseDouble` on the second value to convert it to a `double`. Otherwise, it would be stored as a `String`.
+
+---
+
+This will create to separate `ArrayLists` that store the names and ages. We can match the names and ages by their index. Let's find the youngest person in the list.
+
+---
+
+```java
+
+import java.io.*;
+import java.util.*;
+
+public class InClass {
+
+    public static void main(String[] args) throws IOException {
+        File file = new File("input.csv");
+        Scanner scanner = new Scanner(file);
+        ArrayList<String> names = new ArrayList<>();
+        ArrayList<Double> ages = new ArrayList<>();
+        while(scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] values = line.split(",");
+            names.add(values[0]);
+            double age = Double.parseDouble(values[1]);
+            ages.add(age);
+        }
+        scanner.close();
+
+        int youngestIndex = findYoungest(ages);
+        System.out.println("The youngest person is " + names.get(youngestIndex) + " who is " + ages.get(youngestIndex) + " years old.");
+    }
+
+    public static int findYoungest(ArrayList<Double> ages) {
+        int youngestIndex = 0;
+        double youngest = ages.get(0);
+        for(int i = 1; i < ages.size(); i++) {
+            if(ages.get(i) < youngest) {
+                youngest = ages.get(i);
+                youngestIndex = i;
+            }
+        }
+        return youngestIndex;
+    }
+}
+```
+
+---
+
+Is there a way that we can combine both the name and age into one `ArrayList`?
+
+Can we add a dimension to the `ArrayList`?
+
+---
 
 ```java
 import java.io.*;
@@ -362,29 +440,103 @@ public class InClass {
 
 ---
 
-Let's read a file that contains numbers and calculate the sum of the numbers.
+Now that we have the values stored in one `ArrayList`, let's search through and find the youngest person.
 
 ```java
 
-import java.io.File;
+import java.io.*;
+import java.util.*;
 
 public class InClass {
 
-    public static void main(String[] args throws IOException {
-        File file = new File("input_num.csv");
+    public static void main(String[] args) throws IOException {
+        File file = new File("input.csv");
         Scanner scanner = new Scanner(file);
-        int sum = 0;
+        ArrayList<String[]> data = new ArrayList<>();
         while(scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] values = line.split(",");
-            for(int i = 0; i < values.length; i++) {
-                sum += Integer.parseInt(values[i]);
-            }
+            data.add(values);
         }
         scanner.close();
 
-        System.out.println("The sum of the numbers is " + sum);
+        int youngestIndex = findYoungest(data);
+        System.out.println("The youngest person is " + data.get(youngestIndex)[0] + " who is " + data.get(youngestIndex)[1] + " years old.");
     }
+
+    public static int findYoungest(ArrayList<String[]> data) {
+        int youngestIndex = 0;
+        double youngest = Double.parseDouble(data.get(0)[1]);
+        for(int i = 1; i < data.size(); i++) {
+            double age = Double.parseDouble(data.get(i)[1]);
+            if(age < youngest) {
+                youngest = age;
+                youngestIndex = i;
+            }
+        }
+        return youngestIndex;
+    }
+}
+```
+
+---
+
+Notice that we are converting the age to a `double` before we compare it to the youngest age. This is because the age is stored as a `String` in the `ArrayList`. You can do a conversion from `String` to any other data type. Either before you save it to an `ArrayList` or when you retrieve it from the `ArrayList`. `String` is acting as a universal or intermediary data type.
+
+---
+
+Let's create our own `.csv` and `.txt` files and read and write to them. We can can read them into our program and write data to them. Then when we are finished running the program, we can save them back to a file. Let's make a `.csv` file of our own. Make it up yourself but make sure you ware using both `String` and `double` data types.
+
+---
+
+```java
+
+import java.io.*;
+import java.util.*;
+
+public class InClass {
+
+    public static void main(String[] args) throws IOException {
+        File file = new File("data.csv");
+        Scanner scanner = new Scanner(file);
+        ArrayList<String[]> data = new ArrayList<>();
+        while(scanner.hasNextLine()) {
+            String line = scanner.nextLine();
+            String[] values = line.split(",");
+            data.add(values);
+        }
+        scanner.close();
+
+        //Let's add 1 to all the ages and save the data back to the file. We can do this in a method.
+        addOneToAges(data);
+        saveData(data);
+
+    }
+
+    public static void addOneToAges(ArrayList<String[]> data) {
+        for(int i = 0; i < data.size(); i++) {
+            double age = Double.parseDouble(data.get(i)[1]);
+            age++;
+            data.get(i)[1] = Double.toString(age);
+        }
+    }
+
+    public static void saveData(ArrayList<String[]> data) throws IOException {
+        File file = new File("data.csv");
+        PrintWriter writer = new PrintWriter(file);
+        for(int i = 0; i < data.size(); i++) {
+            String[] values = data.get(i);
+            for(int j = 0; j < values.length; j++) {
+                writer.print(values[j]);
+                if(j < values.length - 1) {
+                    writer.print(",");
+                }
+            }
+            writer.println();
+        }
+        writer.close();
+    }
+
 }
 ```
 
