@@ -23,7 +23,7 @@ style: |
       }
 ---
 
-# Week 13: Computer Science 1
+# Week 14: Computer Science 1
 
 ## File Reading and Writing
 
@@ -219,7 +219,7 @@ Notice that we close the `PrintWriter` object after we are done writing to the f
 
 ---
 
-Let's crate a program that prompts the user for their name and writes it to a file.
+Let's create a program that prompts the user for their name and writes it to a file.
 
 ```java
 
@@ -347,7 +347,9 @@ while(scanner.hasNextLine()) {
     String[] values = line.split(",");
     names.add(values[0]);
     double age = Double.parseDouble(values[1]);
-    ages.add(Double.parseDouble(age);
+    ages.add(age);
+    // Or in one line
+    // ages.add(Double.parseDouble(values[1])
 }
 ```
 
