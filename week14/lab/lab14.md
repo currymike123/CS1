@@ -43,4 +43,4 @@ Account Balance: 5561.1
 
 - Add a method that will allow the user to search for a person by their last name. If the person is found, print out their information. If the person is not found, print out a message saying that the person was not found.
 
-- **Hint** You can use the `contains` method to check if a `String` contains another `String`.
+- **Hint** You can use the `equals` method to check if a `String` equals another `String`.

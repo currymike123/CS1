@@ -78,24 +78,27 @@ public static boolean isValidSSN(String ssn) {
 
 ```java
 
-ArrayList<Integer> ids = new ArrayList<>();
-ArrayList<String> firstNames = new ArrayList<>();
-ArrayList<String> lastNames = new ArrayList<>();
-ArrayList<Double> accountBalances = new ArrayList<>();
+import java.io.*;
+import java.util.*;
 
-public static void main(String[] args) throws FileNotFoundException {
+public static void main(String[] args) throws IOException {
+
+    ArrayList<Integer> ids = new ArrayList<>();
+    ArrayList<String> firstNames = new ArrayList<>();
+    ArrayList<String> lastNames = new ArrayList<>();
+    ArrayList<Double> accountBalances = new ArrayList<>();
 
     File file = new File("in.csv");
-    Scanner file = new Scanner(file);
-    while (file.hasNextLine()) {
-      String line = file.nextLine();
+    Scanner input = new Scanner(file);
+    while (input.hasNextLine()) {
+      String line = input.nextLine();
       String[] data = line.split(", ");
       ids.add(Integer.parseInt(data[0]));
       firstNames.add(data[1]);
       lastNames.add(data[2]);
       accountBalances.add(Double.parseDouble(data[3]));
     }
-    file.close();
+    input.close();
   }
 }
 ```
@@ -169,22 +172,23 @@ public static void findPersonWithLowestBalance(ArrayList<Integer> ids, ArrayList
 ```java
 
 public static void writeToFile(String fileName, ArrayList<Integer> ids, ArrayList<String> firstNames, ArrayList<String> lastNames, ArrayList<Double> accountBalances, int index) throws IOException {
-  FileWriter writer = new FileWriter(fileName);
-  writer.write("ID: " + ids.get(index) + "\n");
-  writer.write("First Name: " + firstNames.get(index) + "\n");
-  writer.write("Last Name: " + lastNames.get(index) + "\n");
-  writer.write("Account Balance: " + accountBalances.get(index) + "\n");
+  File file = new File(fileName);
+  PrintWriter writer = new PrintWriter(file);
+  writer.println("ID: " + ids.get(index));
+  writer.println("First Name: " + firstNames.get(index));
+  writer.println("Last Name: " + lastNames.get(index));
+  writer.println("Account Balance: " + accountBalances.get(index));
   writer.close();
 }
 ```
 
 - Add a method that will allow the user to search for a person by their last name. If the person is found, print out their information. If the person is not found, print out a message saying that the person was not found.
 
-- **Hint** You can use the `contains` method to check if a `String` contains another `String`.
+- **Hint** You can use the `equals` method to check if a `String` equals another `String`.
 
 ```java
 
-public static void main(String[] args) {
+public static void main(String[] args) throws IOException {
   ArrayList<Integer> ids = new ArrayList<>();
   ArrayList<String> firstNames = new ArrayList<>();
   ArrayList<String> lastNames = new ArrayList<>();
@@ -226,4 +230,114 @@ public static void searchPersonByLastName(ArrayList<Integer> ids, ArrayList<Stri
 }
 ```
 
-[]
+- Write the Program so you are using one `ArrayList` with a `string` array for each line of the file. Then you can use the `split` method to separate the data into the correct `ArrayLists`.
+
+```java
+
+public static void main(String[] args) throws IOException{
+  ArrayList<String[]> data = new ArrayList<>();
+
+  File file = new File("in.csv");
+  Scanner file = new Scanner(file);
+
+  while (file.hasNextLine()) {
+    String line = file.nextLine();
+    String[] splitData = line.split(", ");
+    data.add(splitData);
+  }
+
+}
+```
+
+- Add a method to print an entry by the Id.
+
+```java
+
+public static void printEntryById(ArrayList<String[]> data, int id) {
+  for (int i = 0; i < data.size(); i++) {
+    if (Integer.parseInt(data.get(i)[0]) == id) {
+      System.out.println("ID: " + data.get(i)[0]);
+      System.out.println("First Name: " + data.get(i)[1]);
+      System.out.println("Last Name: " + data.get(i)[2]);
+      System.out.println("Account Balance: " + data.get(i)[3]);
+      break;
+    }
+  }
+}
+```
+
+- Now pass the `ArrayList` of `String[]` to the methods that return the ID of the person with the highest and lowest account balance.
+
+```java
+
+public static void findPersonWithHighestBalance(ArrayList<String[]> data) {
+  double maxBalance = Double.parseDouble(data.get(0)[3]);
+  int maxIndex = 0;
+  for (int i = 1; i < data.size(); i++) {
+    if (Double.parseDouble(data.get(i)[3]) > maxBalance) {
+      maxBalance = Double.parseDouble(data.get(i)[3]);
+      maxIndex = i;
+    }
+  }
+  return maxIndex;
+}
+
+public static void findPersonWithLowestBalance(ArrayList<String[]> data) {
+  double minBalance = Double.parseDouble(data.get(0)[3]);
+  int minIndex = 0;
+  for (int i = 1; i < data.size(); i++) {
+    if (Double.parseDouble(data.get(i)[3]) < minBalance) {
+      minBalance = Double.parseDouble(data.get(i)[3]);
+      minIndex = i;
+    }
+  }
+  return minIndex;
+}
+```
+
+- Now put together the full program that loads `in.csv` into an `ArrayList` of `String[]`, finds the person with the highest and lowest account balance, returns there Id, and passes it to the `printEntryById` method. Then add a search function where the user can enter a last name and the program will print out the information of the person with that last name.
+
+```java
+
+public static void main(String[] args) {
+  ArrayList<String[]> data = new ArrayList<>();
+
+  File file = new File("in.csv");
+  Scanner file = new Scanner(file);
+
+  while (file.hasNextLine()) {
+    String line = file.nextLine();
+    String[] splitData = line.split(", ");
+    data.add(splitData);
+  }
+
+  int maxIndex = findPersonWithHighestBalance(data);
+  int minIndex = findPersonWithLowestBalance(data);
+
+  printEntryById(data, maxIndex);
+  printEntryById(data, minIndex);
+
+  Scanner input = new Scanner(System.in);
+  System.out.print("Enter last name to search: ");
+  String lastName = input.nextLine();
+  searchPersonByLastName(data, lastName);
+}
+
+public static void searchPersonByLastName(ArrayList<String[]> data, String lastName) {
+  boolean found = false;
+  for (int i = 0; i < data.size(); i++) {
+    if (data.get(i)[2].equals(lastName)) {
+      System.out.println("Person found:");
+      System.out.println("ID: " + data.get(i)[0]);
+      System.out.println("First Name: " + data.get(i)[1]);
+      System.out.println("Last Name: " + data.get(i)[2]);
+      System.out.println("Account Balance: " + data.get(i)[3]);
+      found = true;
+      break;
+    }
+  }
+  if (!found) {
+    System.out.println("Person not found.");
+  }
+}
+```
