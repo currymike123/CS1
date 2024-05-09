@@ -202,6 +202,7 @@ Let's write to a file using `PrintWriter`
 ```java
 
 import java.io.*;
+import java.util.*;
 
 public class WriteToFile {
 
@@ -222,6 +223,7 @@ Let's read from a `.txt` file using `Scanner` and the contents to an ArrayList.
 ```java
 
 import java.io.*;
+import java.util.*;
 
 public class ReadFromFile {
 
@@ -230,9 +232,11 @@ public class ReadFromFile {
         Scanner scanner = new Scanner(file);
         ArrayList<String> list = new ArrayList<String>();
 
-        while (scanner.hasNext()) {
+        while (scanner.hasNextLine()) {
             list.add(scanner.nextLine());
         }
+
+        scanner.close();
 
     }
 }
@@ -245,6 +249,7 @@ Let's read a `.csv` file, split at the comma, and add the elements to an ArrayLi
 ```java
 
 import java.io.*;
+import java.util.*;
 
 public class ReadCSV {
 
@@ -253,13 +258,15 @@ public class ReadCSV {
         Scanner scanner = new Scanner(file);
         ArrayList<String> list = new ArrayList<String>();
 
-        while (scanner.hasNext()) {
+        while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
             String[] data = line.split(",");
             for (int i = 0; i < data.length; i++) {
                 list.add(data[i]);
             }
         }
+
+        scanner.close();
 
     }
 }
