@@ -44,7 +44,7 @@ Write a method called `calcValue` that calculates the total value of the invento
 Lastly, you need to write the total value of the inventory to a file called `total.txt`. The file should have the following format:
 
 ```
-Total Value: 45.0
+Total Value: 42.50
 ```
 
 **Note:** The total value should not be hardcoded. It should be calculated using the `calcValue` method.
