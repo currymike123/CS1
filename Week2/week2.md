@@ -48,10 +48,7 @@ It would be cumbersome to remember the numbered addresses in memory. Instead, we
 
 ---
 
-<b>Variables</b> and <b>constants</b> are used to store information to be referenced by a computer program. They are named locations to reference a computer's memory locations.
-
-- <b>Variables</b> are values that can change after being assigned a value.
-- <b>Constants</b> are values that do not change after being assigned a value. (We will discuss later)
+<b>Variables</b> are used to store information to be referenced by a computer program. They are named locations to reference a computer's memory locations.
 
 ---
 
@@ -168,7 +165,7 @@ This is not allowed. You cannot declare a (local) variable of the same name twic
 
 ## Decimal Numbers
 
-<b>Float</b> and <b>double</b> are used to store decimal numbers. The difference from integers is the addition of a decimal place, the size of the number they can store, and the precision of the number. A double is more precise than a float. The default type for decimal numbers is a double. To use a float you must add an f to the end of the number.
+<b>Double</b> and </b>float</b> are used to store decimal numbers. Java uses `double` as the default type for decimal numbers. Decimals numbers are referred to as floating point numbers in Java, the decimal point is the "floating point".
 
 ### 0.0, 0.1, 0.2, 0.3, 0.4, 0.5, . . .
 
