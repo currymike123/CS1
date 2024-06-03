@@ -1,1 +1,0 @@
-x = (r.nextInt(5) + r.nextInt(5))/2;

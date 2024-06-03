@@ -1,1 +1,0 @@
-System.out.println(100.0 + 50/4);
