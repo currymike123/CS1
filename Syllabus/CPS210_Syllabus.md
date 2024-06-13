@@ -112,19 +112,19 @@ Attendance in lab is mandatory. A laptop should be brought every lab. There are 
 | Week | Topic                                     |
 | ---- | ----------------------------------------- |
 | 1    | Introduction to Computer Science & Binary |
-| 2    | Variables                                 |
+| 2    | OOP & Variables                           |
 | 3    | Control Structures                        |
 | 4    | I/O & <b>Test 1</b>                       |
 | 5    | Iteration & Loops                         |
-| 6    | Iteration & Error handling                |
+| 6    | Iteration continued                       |
 | 7    | <b>Test 2</b> & Methods                   |
 | 8    | Methods Continued & Arrays                |
 | 9    | Nesting & 2D Arrays                       |
-| 10   | Math Package & Classes                    |
+| 10   | Java Packages                             |
 | 11   | ArrayList & <b>Test 3</b>                 |
-| 12   | Strings                                   |
-| 13   | File Reading & Handling                   |
-| 14   | Recursion                                 |
+| 12   | String Methods                            |
+| 13   | File Reading & Writing                    |
+| 14   | File Reading & Writing continued          |
 | 15   | Final Exam Review                         |
 
 ### SUPPLEMENTAL INSTRUCTION:
